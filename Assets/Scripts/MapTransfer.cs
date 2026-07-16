@@ -124,6 +124,7 @@ public class MapTransfer : MonoBehaviour
                 }
             }
         }
+        // 반가워!
     }
     public void UnloadScene(string SceneName)
     {
