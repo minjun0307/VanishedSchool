@@ -1,0 +1,12 @@
+{
+    "savedTime": "2026-07-13 17:27:31",
+    "playerFloor": 0,
+    "playerX": -2.400674343109131,
+    "playerY": 5.599999904632568,
+    "monsterState": 3,
+    "monsterActive": true,
+    "monsterFloor": 1,
+    "monsterX": -1.7194499969482422,
+    "monsterY": 6.149999618530273,
+    "inventory": []
+}

@@ -1,0 +1,1955 @@
+fileFormatVersion: 2
+guid: 3ad1425d31849a84e81f5242eb4c1347
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1885946942062363556
+    second: School_B_0
+  - first:
+      213: 8607577967989875595
+    second: School_B_1
+  - first:
+      213: 4506524526575188744
+    second: School_B_2
+  - first:
+      213: 5891655385992000430
+    second: School_B_3
+  - first:
+      213: 1214366112954171883
+    second: School_B_4
+  - first:
+      213: -4344460921321898858
+    second: School_B_5
+  - first:
+      213: -3647149347966577717
+    second: School_B_6
+  - first:
+      213: -7638892893706386503
+    second: School_B_7
+  - first:
+      213: 8688311817347832547
+    second: School_B_8
+  - first:
+      213: 7873899824865137639
+    second: School_B_9
+  - first:
+      213: 4776340080536087003
+    second: School_B_10
+  - first:
+      213: -8556411449029691210
+    second: School_B_11
+  - first:
+      213: 6885037497988460853
+    second: School_B_12
+  - first:
+      213: 5560542854719590204
+    second: School_B_13
+  - first:
+      213: -3038956038338507705
+    second: School_B_14
+  - first:
+      213: -2604402131953470553
+    second: School_B_15
+  - first:
+      213: -5035645891544466038
+    second: School_B_16
+  - first:
+      213: 8100754200517347979
+    second: School_B_17
+  - first:
+      213: -7764552659658388256
+    second: School_B_18
+  - first:
+      213: -5683433560200455731
+    second: School_B_19
+  - first:
+      213: 4535897770852036149
+    second: School_B_20
+  - first:
+      213: 5718262688013249422
+    second: School_B_21
+  - first:
+      213: 2619476761972780054
+    second: School_B_22
+  - first:
+      213: 8287257545323422194
+    second: School_B_23
+  - first:
+      213: 2882717165493294533
+    second: School_B_24
+  - first:
+      213: 1191143029518847454
+    second: School_B_25
+  - first:
+      213: 6189962454593428273
+    second: School_B_26
+  - first:
+      213: 4062060513143751642
+    second: School_B_27
+  - first:
+      213: 6229849479021643969
+    second: School_B_28
+  - first:
+      213: -9123765368781820982
+    second: School_B_29
+  - first:
+      213: -4830710374366544263
+    second: School_B_30
+  - first:
+      213: 8954036017563183679
+    second: School_B_31
+  - first:
+      213: -9119314564654290706
+    second: School_B_32
+  - first:
+      213: -5071599046301292299
+    second: School_B_33
+  - first:
+      213: 7184784316996090478
+    second: School_B_34
+  - first:
+      213: -1178118035445025177
+    second: School_B_35
+  - first:
+      213: 5495521287677373249
+    second: School_B_36
+  - first:
+      213: -4315341765407275053
+    second: School_B_37
+  - first:
+      213: -1856104804986997208
+    second: School_B_38
+  - first:
+      213: -2713048826614289971
+    second: School_B_39
+  - first:
+      213: -2906728263054362089
+    second: School_B_40
+  - first:
+      213: -2285749837334931200
+    second: School_B_41
+  - first:
+      213: -8553384353402258924
+    second: School_B_42
+  - first:
+      213: -93014399714660200
+    second: School_B_43
+  - first:
+      213: 4271673245149361077
+    second: School_B_44
+  - first:
+      213: 1409238365063302863
+    second: School_B_45
+  - first:
+      213: -5031344979075829962
+    second: School_B_46
+  - first:
+      213: 4962103756751875349
+    second: School_B_47
+  - first:
+      213: -4524364650802449720
+    second: School_B_48
+  - first:
+      213: -4947781665000287495
+    second: School_B_49
+  - first:
+      213: 5877087508347829446
+    second: School_B_50
+  - first:
+      213: 460291782205531591
+    second: School_B_51
+  - first:
+      213: 3162836734881636742
+    second: School_B_52
+  - first:
+      213: -864102535780006406
+    second: School_B_53
+  - first:
+      213: 4178099849487804283
+    second: School_B_54
+  - first:
+      213: -7034284364180248297
+    second: School_B_55
+  - first:
+      213: 1142513707319438090
+    second: School_B_56
+  - first:
+      213: 8441006356912556017
+    second: School_B_57
+  - first:
+      213: -6917643773587240277
+    second: School_B_58
+  - first:
+      213: -8777849215162584369
+    second: School_B_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: School_B_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 687
+        width: 192
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c73259f35c3d5e0800000000000000
+      internalID: -1885946942062363556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_1
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 754
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b83e3869e82447770800000000000000
+      internalID: 8607577967989875595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_2
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 754
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80b791a2e246a8e30800000000000000
+      internalID: 4506524526575188744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_3
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 754
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3f115bb5d53c150800000000000000
+      internalID: 5891655385992000430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_4
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 723
+        width: 96
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1c7e5bb8b4ad010800000000000000
+      internalID: 1214366112954171883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_5
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 729
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69cba0c5fcf55b3c0800000000000000
+      internalID: -4344460921321898858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_6
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 708
+        width: 64
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc397afcdf8b26dc0800000000000000
+      internalID: -3647149347966577717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_7
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 725
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b30061c2633df590800000000000000
+      internalID: -7638892893706386503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_8
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 638
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea98d2b095139870800000000000000
+      internalID: 8688311817347832547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_9
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 706
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e3d81a4c26b54d60800000000000000
+      internalID: 7873899824865137639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_10
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 706
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd960d24ff7f84240800000000000000
+      internalID: 4776340080536087003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_11
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 647
+        width: 101
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8ff74fe15814980800000000000000
+      internalID: -8556411449029691210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_12
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 677
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 531b8dc30219c8f50800000000000000
+      internalID: 6885037497988460853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_13
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 624
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3fc5ede3440b2d40800000000000000
+      internalID: 5560542854719590204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_14
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 658
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c0ece859573d5d0800000000000000
+      internalID: -3038956038338507705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_15
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 658
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a3b4a84f0e4bdbd0800000000000000
+      internalID: -2604402131953470553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 555
+        width: 40
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d36dbddbacd1ab0800000000000000
+      internalID: -5035645891544466038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 604
+        width: 95
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a07969609ab6070800000000000000
+      internalID: 8100754200517347979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_18
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 630
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ec4f319e74ce3490800000000000000
+      internalID: -7764552659658388256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_19
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 633
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9d7b30a436021b0800000000000000
+      internalID: -5683433560200455731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_20
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 582
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e2f198dfeb2fe30800000000000000
+      internalID: 4535897770852036149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_21
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 582
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b666b3e995b5f40800000000000000
+      internalID: 5718262688013249422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_22
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 583
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c27c68c304a5420800000000000000
+      internalID: 2619476761972780054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_23
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 582
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f1ad2764d0420370800000000000000
+      internalID: 8287257545323422194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_24
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 567
+        width: 71
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5162d1df7710820800000000000000
+      internalID: 2882717165493294533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_25
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 555
+        width: 70
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edd472f364ac78010800000000000000
+      internalID: 1191143029518847454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_26
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 535
+        width: 140
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13bdb0f7e0a27e550800000000000000
+      internalID: 6189962454593428273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_27
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 534
+        width: 26
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad30316d3865f5830800000000000000
+      internalID: 4062060513143751642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_28
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 406
+        width: 41
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c8cc31181fd47650800000000000000
+      internalID: 6229849479021643969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_29
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 504
+        width: 157
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acbafb3acbfd16180800000000000000
+      internalID: -9123765368781820982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_30
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 496
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97e761b328ed5fcb0800000000000000
+      internalID: -4830710374366544263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_31
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 440
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a28e44150234c70800000000000000
+      internalID: 8954036017563183679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_32
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 417
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee82cba38bfa17180800000000000000
+      internalID: -9119314564654290706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_33
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 443
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f86002b98f0e99b0800000000000000
+      internalID: -5071599046301292299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_34
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 413
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6a795a054b75b360800000000000000
+      internalID: 7184784316996090478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_35
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 390
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76671d183eb76afe0800000000000000
+      internalID: -1178118035445025177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_36
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 393
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b6b9f9e73044c40800000000000000
+      internalID: 5495521287677373249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_37
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 311
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d70e7c2783dc14c0800000000000000
+      internalID: -4315341765407275053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_38
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 359
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826bad0938acd36e0800000000000000
+      internalID: -1856104804986997208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_39
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 291
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc96d5f6770595ad0800000000000000
+      internalID: -2713048826614289971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_40
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 276
+        width: 29
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71a7e069b0a39a7d0800000000000000
+      internalID: -2906728263054362089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_41
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 270
+        width: 33
+        height: 79
+      alignment: 9
+      pivot: {x: 0.54354954, y: 0.4999996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0099e3422a26740e0800000000000000
+      internalID: -2285749837334931200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_42
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 259
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41af2149f364c4980800000000000000
+      internalID: -8553384353402258924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_43
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 192
+        width: 97
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890f20275eb85bef0800000000000000
+      internalID: -93014399714660200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_44
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 169
+        width: 45
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3faa52f28084b30800000000000000
+      internalID: 4271673245149361077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_45
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 167
+        width: 41
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce437993de9e8310800000000000000
+      internalID: 1409238365063302863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_46
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 179
+        width: 86
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f6db316621d2ab0800000000000000
+      internalID: -5031344979075829962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_47
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 192
+        width: 44
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51da3df831fecd440800000000000000
+      internalID: 4962103756751875349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_48
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 214
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c2f59a325a3631c0800000000000000
+      internalID: -4524364650802449720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_49
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 207
+        width: 46
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f297774ac2f55bb0800000000000000
+      internalID: -4947781665000287495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 23
+        width: 48
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc35f063fb9f8150800000000000000
+      internalID: 5877087508347829446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_51
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 63
+        width: 39
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5646befe8436600800000000000000
+      internalID: 460291782205531591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_52
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 71
+        width: 39
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6812d21c047a4eb20800000000000000
+      internalID: 3162836734881636742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_53
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 35
+        width: 96
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5815962571204f0800000000000000
+      internalID: -864102535780006406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_54
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 32
+        width: 120
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7765d43da79bf930800000000000000
+      internalID: 4178099849487804283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_55
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 120
+        width: 133
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 719a3f7d3a3316e90800000000000000
+      internalID: -7034284364180248297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_56
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 60
+        width: 43
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b2acbd9260bdf00800000000000000
+      internalID: 1142513707319438090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_57
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 12
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f7469a2f8a742570800000000000000
+      internalID: 8441006356912556017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_58
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 4
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baac3a0a3a79fff90800000000000000
+      internalID: -6917643773587240277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_59
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 13
+        width: 116
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2fa4655a0de2680800000000000000
+      internalID: -8777849215162584369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_60
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 582
+        width: 47
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504eb3244aca8444eb42c286fd41e79a
+      internalID: -845839412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_61
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 514
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8382eba942b05149b2a2c558efb0445
+      internalID: 561705366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_62
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 254
+        width: 97
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43dea37facfd42449a2a355493de4515
+      internalID: 1002708618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_63
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 225
+        width: 95
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072a4db05e61ca5428c5c5a00ec86d83
+      internalID: 863920215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_64
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 117
+        width: 97
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900165da092d3904b9fb05637a33af5b
+      internalID: -1322841515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_65
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 136
+        width: 94
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139fab7c31b0bd94e9cff17377cdfd85
+      internalID: 353825439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_66
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 410
+        width: 94
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edefb1172fe40c947b89174320a50535
+      internalID: -1819185931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_67
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 398
+        width: 192
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de898d28c3788a4da52a1b66c2ca2ef
+      internalID: -694571392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_68
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 706
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f417727f0c15d2f4e86f5da3c49f11b9
+      internalID: 979390617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_69
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 299
+        width: 96
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d585e92ffc536904c8760751547c50cd
+      internalID: 461665039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_70
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 311
+        width: 36
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ae6f4f56e3a644090c218fbf783fca
+      internalID: -1352468663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School_B_71
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 340
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17433793c1727f46814c7e33f4198a6
+      internalID: 898533357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b7749b17481f19147af8e253b3d431ca
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      School_B_0: -1885946942062363556
+      School_B_1: 8607577967989875595
+      School_B_10: 4776340080536087003
+      School_B_11: -8556411449029691210
+      School_B_12: 6885037497988460853
+      School_B_13: 5560542854719590204
+      School_B_14: -3038956038338507705
+      School_B_15: -2604402131953470553
+      School_B_16: -5035645891544466038
+      School_B_17: 8100754200517347979
+      School_B_18: -7764552659658388256
+      School_B_19: -5683433560200455731
+      School_B_2: 4506524526575188744
+      School_B_20: 4535897770852036149
+      School_B_21: 5718262688013249422
+      School_B_22: 2619476761972780054
+      School_B_23: 8287257545323422194
+      School_B_24: 2882717165493294533
+      School_B_25: 1191143029518847454
+      School_B_26: 6189962454593428273
+      School_B_27: 4062060513143751642
+      School_B_28: 6229849479021643969
+      School_B_29: -9123765368781820982
+      School_B_3: 5891655385992000430
+      School_B_30: -4830710374366544263
+      School_B_31: 8954036017563183679
+      School_B_32: -9119314564654290706
+      School_B_33: -5071599046301292299
+      School_B_34: 7184784316996090478
+      School_B_35: -1178118035445025177
+      School_B_36: 5495521287677373249
+      School_B_37: -4315341765407275053
+      School_B_38: -1856104804986997208
+      School_B_39: -2713048826614289971
+      School_B_4: 1214366112954171883
+      School_B_40: -2906728263054362089
+      School_B_41: -2285749837334931200
+      School_B_42: -8553384353402258924
+      School_B_43: -93014399714660200
+      School_B_44: 4271673245149361077
+      School_B_45: 1409238365063302863
+      School_B_46: -5031344979075829962
+      School_B_47: 4962103756751875349
+      School_B_48: -4524364650802449720
+      School_B_49: -4947781665000287495
+      School_B_5: -4344460921321898858
+      School_B_50: 5877087508347829446
+      School_B_51: 460291782205531591
+      School_B_52: 3162836734881636742
+      School_B_53: -864102535780006406
+      School_B_54: 4178099849487804283
+      School_B_55: -7034284364180248297
+      School_B_56: 1142513707319438090
+      School_B_57: 8441006356912556017
+      School_B_58: -6917643773587240277
+      School_B_59: -8777849215162584369
+      School_B_6: -3647149347966577717
+      School_B_60: -845839412
+      School_B_61: 561705366
+      School_B_62: 1002708618
+      School_B_63: 863920215
+      School_B_64: -1322841515
+      School_B_65: 353825439
+      School_B_66: -1819185931
+      School_B_67: -694571392
+      School_B_68: 979390617
+      School_B_69: 461665039
+      School_B_7: -7638892893706386503
+      School_B_70: -1352468663
+      School_B_71: 898533357
+      School_B_8: 8688311817347832547
+      School_B_9: 7873899824865137639
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Monster
+  - MedicRoom
+  - Stairs
+  - Portal
+  - Interacts
+  - Doors
+  - Utillity
+  - Util
+  - C1
+  - C2
+  - Backdoor
+  - 1FC1
+  - 1FC2
+  - TeacherRoom
+  - Principle
+  - Stairs2
+  - OtherStair
+  - OtherStair2
+  - 3fc1
+  - 3fc2
+  - 3fc3
+  - ToiletWomen
+  - ToiletMen
+  - T.O M
+  - T.O WM
+  - RuinedRoom
+  - cabin
+  - Davinchi
+  - ItemRoom
+  - BroadCast
+  - LockedRoom
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - NOPAS
+  - Portal
+  - Stair
+  - Exit
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BgMap
+    uniqueID: 3985566651
+    locked: 0
+  - name: AboveObj
+    uniqueID: 597446419
+    locked: 0
+  - name: obj2
+    uniqueID: 3322865671
+    locked: 0
+  - name: d
+    uniqueID: 260021959
+    locked: 0
+  - name: Item
+    uniqueID: 4028574435
+    locked: 0
+  - name: Character
+    uniqueID: 2234443927
+    locked: 0
+  - name: dif
+    uniqueID: 1396032177
+    locked: 0
+  m_RenderingLayers:
+  - Default

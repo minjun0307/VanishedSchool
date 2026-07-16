@@ -1,0 +1,3 @@
+asset,projectsett,package
+
+소식쌤한테 할때 저거만 압축

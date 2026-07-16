@@ -1,0 +1,3250 @@
+fileFormatVersion: 2
+guid: 3bf2f8e86c7e6184494587a5fde4797f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7873696937050374794
+    second: steampunkish-tileb_0
+  - first:
+      213: -815104351148026703
+    second: steampunkish-tileb_1
+  - first:
+      213: 1432493183271307302
+    second: steampunkish-tileb_2
+  - first:
+      213: -5874340255720195574
+    second: steampunkish-tileb_3
+  - first:
+      213: -4330901815065974160
+    second: steampunkish-tileb_4
+  - first:
+      213: 3510784007484544809
+    second: steampunkish-tileb_5
+  - first:
+      213: -8086468081103527326
+    second: steampunkish-tileb_6
+  - first:
+      213: 8871973405284758346
+    second: steampunkish-tileb_7
+  - first:
+      213: -6344008503205984093
+    second: steampunkish-tileb_8
+  - first:
+      213: 2941871229339098716
+    second: steampunkish-tileb_9
+  - first:
+      213: 7314259096272086646
+    second: steampunkish-tileb_10
+  - first:
+      213: 3781011710338937908
+    second: steampunkish-tileb_11
+  - first:
+      213: -5409591955290421799
+    second: steampunkish-tileb_12
+  - first:
+      213: 8700367489077106645
+    second: steampunkish-tileb_13
+  - first:
+      213: -1240960571699025838
+    second: steampunkish-tileb_14
+  - first:
+      213: -34094184718039216
+    second: steampunkish-tileb_15
+  - first:
+      213: 5641239575992933459
+    second: steampunkish-tileb_16
+  - first:
+      213: 2077919774842600206
+    second: steampunkish-tileb_17
+  - first:
+      213: -6885187543432628143
+    second: steampunkish-tileb_18
+  - first:
+      213: -9062179924132279264
+    second: steampunkish-tileb_19
+  - first:
+      213: -7412775071722984232
+    second: steampunkish-tileb_20
+  - first:
+      213: -4475120700187128539
+    second: steampunkish-tileb_21
+  - first:
+      213: -6418053497820655565
+    second: steampunkish-tileb_22
+  - first:
+      213: 1361741869916125088
+    second: steampunkish-tileb_23
+  - first:
+      213: -396635069302729361
+    second: steampunkish-tileb_24
+  - first:
+      213: 3998025720585165686
+    second: steampunkish-tileb_25
+  - first:
+      213: -6998702368945061660
+    second: steampunkish-tileb_26
+  - first:
+      213: -6136673826043126580
+    second: steampunkish-tileb_27
+  - first:
+      213: 7846867395976764477
+    second: steampunkish-tileb_28
+  - first:
+      213: -4842853848866541812
+    second: steampunkish-tileb_29
+  - first:
+      213: -7825741124605405135
+    second: steampunkish-tileb_30
+  - first:
+      213: 8952459733648880835
+    second: steampunkish-tileb_31
+  - first:
+      213: -3022807837729218628
+    second: steampunkish-tileb_32
+  - first:
+      213: 8599496837924258843
+    second: steampunkish-tileb_33
+  - first:
+      213: -2568832561747752129
+    second: steampunkish-tileb_34
+  - first:
+      213: 1461611665867283270
+    second: steampunkish-tileb_35
+  - first:
+      213: 6547553714983462221
+    second: steampunkish-tileb_36
+  - first:
+      213: 5009602805422974523
+    second: steampunkish-tileb_37
+  - first:
+      213: -5372855201141341495
+    second: steampunkish-tileb_38
+  - first:
+      213: -7183052620396192334
+    second: steampunkish-tileb_39
+  - first:
+      213: 511113069175396103
+    second: steampunkish-tileb_40
+  - first:
+      213: 7716164202708316731
+    second: steampunkish-tileb_41
+  - first:
+      213: -8663634449093888162
+    second: steampunkish-tileb_42
+  - first:
+      213: 5649806477593047528
+    second: steampunkish-tileb_43
+  - first:
+      213: -232420106402047009
+    second: steampunkish-tileb_44
+  - first:
+      213: 7182165628064247358
+    second: steampunkish-tileb_45
+  - first:
+      213: 2598798767245989245
+    second: steampunkish-tileb_46
+  - first:
+      213: -1965879699419003302
+    second: steampunkish-tileb_47
+  - first:
+      213: -5174875774720426427
+    second: steampunkish-tileb_48
+  - first:
+      213: 6740785838408914721
+    second: steampunkish-tileb_49
+  - first:
+      213: 7777519456093102709
+    second: steampunkish-tileb_50
+  - first:
+      213: -2905986405540844243
+    second: steampunkish-tileb_51
+  - first:
+      213: 2108890021768326735
+    second: steampunkish-tileb_52
+  - first:
+      213: 9222562071030901731
+    second: steampunkish-tileb_53
+  - first:
+      213: -4898472286620047206
+    second: steampunkish-tileb_54
+  - first:
+      213: -6669339409499975319
+    second: steampunkish-tileb_55
+  - first:
+      213: 4033430643730934744
+    second: steampunkish-tileb_56
+  - first:
+      213: -344995951519412617
+    second: steampunkish-tileb_57
+  - first:
+      213: 1381708917664258170
+    second: steampunkish-tileb_58
+  - first:
+      213: 9020423088496679696
+    second: steampunkish-tileb_59
+  - first:
+      213: -6005073804480590413
+    second: steampunkish-tileb_60
+  - first:
+      213: 5873742137540615929
+    second: steampunkish-tileb_61
+  - first:
+      213: 5335127643628045525
+    second: steampunkish-tileb_62
+  - first:
+      213: -466853536993617382
+    second: steampunkish-tileb_63
+  - first:
+      213: -6966941963005388818
+    second: steampunkish-tileb_64
+  - first:
+      213: -819573358073376732
+    second: steampunkish-tileb_65
+  - first:
+      213: 5481270852677653848
+    second: steampunkish-tileb_66
+  - first:
+      213: -6294791146816521211
+    second: steampunkish-tileb_67
+  - first:
+      213: 4177832157018383465
+    second: steampunkish-tileb_68
+  - first:
+      213: 7682315195334986960
+    second: steampunkish-tileb_69
+  - first:
+      213: 2168298723216825047
+    second: steampunkish-tileb_70
+  - first:
+      213: 7512509317270374168
+    second: steampunkish-tileb_71
+  - first:
+      213: 4315119053532209370
+    second: steampunkish-tileb_72
+  - first:
+      213: -2842635137121224009
+    second: steampunkish-tileb_73
+  - first:
+      213: 183854719402818635
+    second: steampunkish-tileb_74
+  - first:
+      213: -3315882756421411880
+    second: steampunkish-tileb_75
+  - first:
+      213: -1314682154542812742
+    second: steampunkish-tileb_76
+  - first:
+      213: 557127194570209490
+    second: steampunkish-tileb_77
+  - first:
+      213: -2120743420802466404
+    second: steampunkish-tileb_78
+  - first:
+      213: -1119188495345370689
+    second: steampunkish-tileb_79
+  - first:
+      213: -7180914704710014428
+    second: steampunkish-tileb_80
+  - first:
+      213: -7458185987486724011
+    second: steampunkish-tileb_81
+  - first:
+      213: 5761974153935152159
+    second: steampunkish-tileb_82
+  - first:
+      213: -4506178146972140558
+    second: steampunkish-tileb_83
+  - first:
+      213: 5855998515653054188
+    second: steampunkish-tileb_84
+  - first:
+      213: 4770873533150614705
+    second: steampunkish-tileb_85
+  - first:
+      213: -7644253587293709733
+    second: steampunkish-tileb_86
+  - first:
+      213: -4920791475819109076
+    second: steampunkish-tileb_87
+  - first:
+      213: 3769454513489198733
+    second: steampunkish-tileb_88
+  - first:
+      213: -7841916895071978006
+    second: steampunkish-tileb_89
+  - first:
+      213: 3463528917363238903
+    second: steampunkish-tileb_90
+  - first:
+      213: 3136873347457273854
+    second: steampunkish-tileb_91
+  - first:
+      213: 9129192383683218049
+    second: steampunkish-tileb_92
+  - first:
+      213: 6233007470581448426
+    second: steampunkish-tileb_93
+  - first:
+      213: 4907811604992410820
+    second: steampunkish-tileb_94
+  - first:
+      213: -1575305519164740238
+    second: steampunkish-tileb_95
+  - first:
+      213: 6539234899175242164
+    second: steampunkish-tileb_96
+  - first:
+      213: 5309514463334222115
+    second: steampunkish-tileb_97
+  - first:
+      213: 5196328510617516761
+    second: steampunkish-tileb_98
+  - first:
+      213: -2590475275882942664
+    second: steampunkish-tileb_99
+  - first:
+      213: 752062182327865835
+    second: steampunkish-tileb_100
+  - first:
+      213: -5950509867330098637
+    second: steampunkish-tileb_101
+  - first:
+      213: -1420022621885665323
+    second: steampunkish-tileb_102
+  - first:
+      213: 2590559870566353283
+    second: steampunkish-tileb_103
+  - first:
+      213: -2053960804392678829
+    second: steampunkish-tileb_104
+  - first:
+      213: 2966451498422006461
+    second: steampunkish-tileb_105
+  - first:
+      213: 7320987234559968031
+    second: steampunkish-tileb_106
+  - first:
+      213: 4126780220431705447
+    second: steampunkish-tileb_107
+  - first:
+      213: 3437323891759445216
+    second: steampunkish-tileb_108
+  - first:
+      213: 4094495573716287867
+    second: steampunkish-tileb_109
+  - first:
+      213: 2702921923575439389
+    second: steampunkish-tileb_110
+  - first:
+      213: -4013455703286988486
+    second: steampunkish-tileb_111
+  - first:
+      213: -7507155553556171057
+    second: steampunkish-tileb_112
+  - first:
+      213: -9007296906059065213
+    second: steampunkish-tileb_113
+  - first:
+      213: -5439156379296266227
+    second: steampunkish-tileb_114
+  - first:
+      213: -4604210663498735435
+    second: steampunkish-tileb_115
+  - first:
+      213: -1494181326572044081
+    second: steampunkish-tileb_116
+  - first:
+      213: 1519611573136590055
+    second: steampunkish-tileb_117
+  - first:
+      213: -7028075773122503726
+    second: steampunkish-tileb_118
+  - first:
+      213: -3040275179680721760
+    second: steampunkish-tileb_119
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: steampunkish-tileb_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 481
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8208f9c5adf44d60800000000000000
+      internalID: 7873696937050374794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 479
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b452f649ea20b4f0800000000000000
+      internalID: -815104351148026703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 497
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6280e04e5fc31e310800000000000000
+      internalID: 1432493183271307302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_3
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 484
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a350839a62a7ea0800000000000000
+      internalID: -5874340255720195574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 494
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ae5ebcebb85e3c0800000000000000
+      internalID: -4330901815065974160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 482
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9271d31347fc8b030800000000000000
+      internalID: 3510784007484544809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_6
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 485
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2622a4acf1817cf80800000000000000
+      internalID: -8086468081103527326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_7
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 480
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a43f5be6ec49f1b70800000000000000
+      internalID: 8871973405284758346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_8
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 484
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8895ad0ed85f7a0800000000000000
+      internalID: -6344008503205984093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_9
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 418
+        width: 59
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ed2bfdb40a3d820800000000000000
+      internalID: 2941871229339098716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_10
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 416
+        width: 60
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 676a77c35e7718560800000000000000
+      internalID: 7314259096272086646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_11
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 384
+        width: 73
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434385e2e1ad87430800000000000000
+      internalID: 3781011710338937908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_12
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 459
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d58a1527c44de4b0800000000000000
+      internalID: -5409591955290421799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_13
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 447
+        width: 66
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d75cc1822aedb870800000000000000
+      internalID: 8700367489077106645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_14
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 453
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2582d975fe837cee0800000000000000
+      internalID: -1240960571699025838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_15
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 452
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05789f6058fd68ff0800000000000000
+      internalID: -34094184718039216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_16
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 450
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35c1feb7185b94e40800000000000000
+      internalID: 5641239575992933459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_17
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 456
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0bb043a60146dc10800000000000000
+      internalID: 2077919774842600206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_18
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 448
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158f0c59866e270a0800000000000000
+      internalID: -6885187543432628143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_19
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 418
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02c4b6b5f5bac3280800000000000000
+      internalID: -9062179924132279264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_20
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 418
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dca41ac858802990800000000000000
+      internalID: -7412775071722984232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_21
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 435
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d4952fe6d25e1c0800000000000000
+      internalID: -4475120700187128539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_22
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 419
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33052f8195e7ee6a0800000000000000
+      internalID: -6418053497820655565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_23
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 428
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a770201401e5e210800000000000000
+      internalID: 1361741869916125088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_24
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 425
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f659fb4818ede7af0800000000000000
+      internalID: -396635069302729361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_25
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 432
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67b9a5ed537db7730800000000000000
+      internalID: 3998025720585165686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_26
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 436
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e04852b64d9fde90800000000000000
+      internalID: -6998702368945061660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_27
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 429
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc13403ba726daa0800000000000000
+      internalID: -6136673826043126580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_28
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 418
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c1ac8725ca5ec60800000000000000
+      internalID: 7846867395976764477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_29
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 391
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f2d2f351abaccb0800000000000000
+      internalID: -4842853848866541812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_30
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 421
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1389ab3e8e1656390800000000000000
+      internalID: -7825741124605405135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_31
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 418
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c4312212b68d3c70800000000000000
+      internalID: 8952459733648880835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_32
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 419
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbf12ef7944dc06d0800000000000000
+      internalID: -3022807837729218628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_33
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 425
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14029fdfcc875770800000000000000
+      internalID: 8599496837924258843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_34
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 425
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b8195356ca95cd0800000000000000
+      internalID: -2568832561747752129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_35
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 415
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b169fe010b84410800000000000000
+      internalID: 1461611665867283270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_36
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 415
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d45e061d9659dda50800000000000000
+      internalID: 6547553714983462221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 31
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b366903a53fa58540800000000000000
+      internalID: 5009602805422974523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_38
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 415
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c24c5249a8cf65b0800000000000000
+      internalID: -5372855201141341495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_39
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 405
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd985ef2bba05c90800000000000000
+      internalID: -7183052620396192334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_40
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 383
+        width: 66
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7075240e0a6d71700800000000000000
+      internalID: 511113069175396103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_41
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 391
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b32b30bd572551b60800000000000000
+      internalID: 7716164202708316731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_42
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 389
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57fbe5de5694c780800000000000000
+      internalID: -8663634449093888162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_43
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 383
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e172a2be05286e40800000000000000
+      internalID: 5649806477593047528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_44
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 362
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb5f37052746ccf0800000000000000
+      internalID: -232420106402047009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_45
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 353
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e2ac2069d2ca360800000000000000
+      internalID: 7182165628064247358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_46
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 386
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d759b64b5b9c01420800000000000000
+      internalID: 2598798767245989245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_47
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 388
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a568afc34dac7b4e0800000000000000
+      internalID: -1965879699419003302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_48
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 399
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54eb30b86e52f28b0800000000000000
+      internalID: -5174875774720426427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_49
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 395
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 127d85d71051c8d50800000000000000
+      internalID: 6740785838408914721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_50
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 394
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5726e1efcbc4feb60800000000000000
+      internalID: 7777519456093102709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_51
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 364
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2daf9fb2ccdba7d0800000000000000
+      internalID: -2905986405540844243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_52
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 384
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4eedd92d48444d10800000000000000
+      internalID: 2108890021768326735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_53
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 324
+        width: 64
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eba9c2275f1dff70800000000000000
+      internalID: 9222562071030901731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_54
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 351
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a98aae59861250cb0800000000000000
+      internalID: -4898472286620047206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_55
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 353
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9619d3a842fb173a0800000000000000
+      internalID: -6669339409499975319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_56
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 351
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dbe1c9eccf99f730800000000000000
+      internalID: 4033430643730934744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_57
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 351
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77eccbc8204563bf0800000000000000
+      internalID: -344995951519412617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_58
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 371
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a781e54a0f0dc2310800000000000000
+      internalID: 1381708917664258170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_59
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 367
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01b9399b10bfe2d70800000000000000
+      internalID: 9020423088496679696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_60
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 330
+        width: 17
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bd4ee9e031b9aca0800000000000000
+      internalID: -6005073804480590413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_61
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 322
+        width: 33
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe1a5a8a59b38150800000000000000
+      internalID: 5873742137540615929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 319
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d401dd335e2a0a40800000000000000
+      internalID: 5335127643628045525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_63
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 352
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1a5c5d7e276589f0800000000000000
+      internalID: -466853536993617382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_64
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 328
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee71d447233705f90800000000000000
+      internalID: -6966941963005388818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_65
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 338
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42099a48f5a40a4f0800000000000000
+      internalID: -819573358073376732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_66
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 323
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 855dd8bacc2611c40800000000000000
+      internalID: 5481270852677653848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_67
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 335
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c3abe9dc864a8a0800000000000000
+      internalID: -6294791146816521211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_68
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 319
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964e8423634aaf930800000000000000
+      internalID: 4177832157018383465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_69
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 324
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc078ea7f01d9a60800000000000000
+      internalID: 7682315195334986960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_70
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 328
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da954c5338571e10800000000000000
+      internalID: 2168298723216825047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_71
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 324
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81786bbcb6bc14860800000000000000
+      internalID: 7512509317270374168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_72
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 333
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad0ae4daae162eb30800000000000000
+      internalID: 4315119053532209370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_73
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 329
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba78d9576eec88d0800000000000000
+      internalID: -2842635137121224009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_74
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 323
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4cb848a4ee2d8200800000000000000
+      internalID: 183854719402818635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 92
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db98aa833e9bf1d0800000000000000
+      internalID: -3315882756421411880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_76
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 295
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab13ee1cb8f41cde0800000000000000
+      internalID: -1314682154542812742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_77
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 291
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d8311f4b305bb700800000000000000
+      internalID: 557127194570209490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_78
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 192
+        width: 124
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d725f481b9192e0800000000000000
+      internalID: -2120743420802466404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_79
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 288
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb93c324ef7d770f0800000000000000
+      internalID: -1119188495345370689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_80
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 287
+        width: 162
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42a61674f14485c90800000000000000
+      internalID: -7180914704710014428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_81
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 295
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 550de0b0c533f7890800000000000000
+      internalID: -7458185987486724011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_82
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 287
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f14694af6f4a6ff40800000000000000
+      internalID: 5761974153935152159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_83
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 227
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fbf81f99d6d671c0800000000000000
+      internalID: -4506178146972140558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_84
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 255
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cee07b2af9fa44150800000000000000
+      internalID: 5855998515653054188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_85
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 159
+        width: 75
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b451c3833c853240800000000000000
+      internalID: 4770873533150614705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_86
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 258
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a5a540dd72ae590800000000000000
+      internalID: -7644253587293709733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_87
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 256
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2528066936d5bbb0800000000000000
+      internalID: -4920791475819109076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_88
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 255
+        width: 96
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e348998eacf4430800000000000000
+      internalID: 3769454513489198733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_89
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 191
+        width: 16
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aedb917d12aeb2390800000000000000
+      internalID: -7841916895071978006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_90
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 191
+        width: 34
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7aab4233de01030800000000000000
+      internalID: 3463528917363238903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_91
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 192
+        width: 30
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: effc49c80b9688b20800000000000000
+      internalID: 3136873347457273854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_92
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 193
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ac3abba1861be70800000000000000
+      internalID: 9129192383683218049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_93
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 197
+        width: 25
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeefc564547108650800000000000000
+      internalID: 6233007470581448426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_94
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 189
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4cc1ce6ac0c1440800000000000000
+      internalID: 4907811604992410820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_95
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 172
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d29750af3632ae0800000000000000
+      internalID: -1575305519164740238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_96
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 191
+        width: 64
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b97d249e7700ca50800000000000000
+      internalID: 6539234899175242164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_97
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 191
+        width: 96
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329c5dcf54f2fa940800000000000000
+      internalID: 5309514463334222115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_98
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 131
+        width: 58
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9da7793cf311d1840800000000000000
+      internalID: 5196328510617516761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_99
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 180
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83fa0952678cc0cd0800000000000000
+      internalID: -2590475275882942664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_100
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 176
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be158aaf19cdf6a00800000000000000
+      internalID: 752062182327865835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_101
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 96
+        width: 29
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a25558dca8b6da0800000000000000
+      internalID: -5950509867330098637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_102
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 127
+        width: 33
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df6c71f2f01b4ce0800000000000000
+      internalID: -1420022621885665323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_103
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 128
+        width: 30
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3894d761a7483f320800000000000000
+      internalID: 2590559870566353283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_104
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 127
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a499fd78dde73e0800000000000000
+      internalID: -2053960804392678829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_105
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 128
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db27edebbe3fa2920800000000000000
+      internalID: 2966451498422006461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_106
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 80
+        width: 147
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13cd110a1f599560800000000000000
+      internalID: 7320987234559968031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_107
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 162
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765a0f0feb4454930800000000000000
+      internalID: 4126780220431705447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_108
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 163
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e4f84a2ed3d3bf20800000000000000
+      internalID: 3437323891759445216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_109
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 127
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b71c4cdd70292d830800000000000000
+      internalID: 4094495573716287867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_110
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 128
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1064563b25b28520800000000000000
+      internalID: 2702921923575439389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_111
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 134
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3140d35d475d48c0800000000000000
+      internalID: -4013455703286988486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_112
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 77
+        width: 27
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6fea47cc931d790800000000000000
+      internalID: -7507155553556171057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_113
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 93
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 388dfd7cf27aff280800000000000000
+      internalID: -9007296906059065213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_114
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 95
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d080f36471c3484b0800000000000000
+      internalID: -5439156379296266227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_115
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 69
+        width: 26
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0a713bbce8a10c0800000000000000
+      internalID: -4604210663498735435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_116
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 64
+        width: 38
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0c6affff9934be0800000000000000
+      internalID: -1494181326572044081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_117
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 0
+        width: 161
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e4016dacaeb61510800000000000000
+      internalID: 1519611573136590055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 61
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db11881252477e90800000000000000
+      internalID: -7028075773122503726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steampunkish-tileb_119
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 97
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a491b705d5cec5d0800000000000000
+      internalID: -3040275179680721760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 35e8573247ed6e641be1a6c32fba52e1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      steampunkish-tileb_0: 7873696937050374794
+      steampunkish-tileb_1: -815104351148026703
+      steampunkish-tileb_10: 7314259096272086646
+      steampunkish-tileb_100: 752062182327865835
+      steampunkish-tileb_101: -5950509867330098637
+      steampunkish-tileb_102: -1420022621885665323
+      steampunkish-tileb_103: 2590559870566353283
+      steampunkish-tileb_104: -2053960804392678829
+      steampunkish-tileb_105: 2966451498422006461
+      steampunkish-tileb_106: 7320987234559968031
+      steampunkish-tileb_107: 4126780220431705447
+      steampunkish-tileb_108: 3437323891759445216
+      steampunkish-tileb_109: 4094495573716287867
+      steampunkish-tileb_11: 3781011710338937908
+      steampunkish-tileb_110: 2702921923575439389
+      steampunkish-tileb_111: -4013455703286988486
+      steampunkish-tileb_112: -7507155553556171057
+      steampunkish-tileb_113: -9007296906059065213
+      steampunkish-tileb_114: -5439156379296266227
+      steampunkish-tileb_115: -4604210663498735435
+      steampunkish-tileb_116: -1494181326572044081
+      steampunkish-tileb_117: 1519611573136590055
+      steampunkish-tileb_119: -3040275179680721760
+      steampunkish-tileb_12: -5409591955290421799
+      steampunkish-tileb_13: 8700367489077106645
+      steampunkish-tileb_14: -1240960571699025838
+      steampunkish-tileb_15: -34094184718039216
+      steampunkish-tileb_16: 5641239575992933459
+      steampunkish-tileb_17: 2077919774842600206
+      steampunkish-tileb_18: -6885187543432628143
+      steampunkish-tileb_19: -9062179924132279264
+      steampunkish-tileb_2: 1432493183271307302
+      steampunkish-tileb_20: -7412775071722984232
+      steampunkish-tileb_21: -4475120700187128539
+      steampunkish-tileb_22: -6418053497820655565
+      steampunkish-tileb_23: 1361741869916125088
+      steampunkish-tileb_24: -396635069302729361
+      steampunkish-tileb_25: 3998025720585165686
+      steampunkish-tileb_26: -6998702368945061660
+      steampunkish-tileb_27: -6136673826043126580
+      steampunkish-tileb_28: 7846867395976764477
+      steampunkish-tileb_29: -4842853848866541812
+      steampunkish-tileb_3: -5874340255720195574
+      steampunkish-tileb_30: -7825741124605405135
+      steampunkish-tileb_31: 8952459733648880835
+      steampunkish-tileb_32: -3022807837729218628
+      steampunkish-tileb_33: 8599496837924258843
+      steampunkish-tileb_34: -2568832561747752129
+      steampunkish-tileb_35: 1461611665867283270
+      steampunkish-tileb_36: 6547553714983462221
+      steampunkish-tileb_37: 5009602805422974523
+      steampunkish-tileb_38: -5372855201141341495
+      steampunkish-tileb_39: -7183052620396192334
+      steampunkish-tileb_4: -4330901815065974160
+      steampunkish-tileb_40: 511113069175396103
+      steampunkish-tileb_41: 7716164202708316731
+      steampunkish-tileb_42: -8663634449093888162
+      steampunkish-tileb_43: 5649806477593047528
+      steampunkish-tileb_44: -232420106402047009
+      steampunkish-tileb_45: 7182165628064247358
+      steampunkish-tileb_46: 2598798767245989245
+      steampunkish-tileb_47: -1965879699419003302
+      steampunkish-tileb_48: -5174875774720426427
+      steampunkish-tileb_49: 6740785838408914721
+      steampunkish-tileb_5: 3510784007484544809
+      steampunkish-tileb_50: 7777519456093102709
+      steampunkish-tileb_51: -2905986405540844243
+      steampunkish-tileb_52: 2108890021768326735
+      steampunkish-tileb_53: 9222562071030901731
+      steampunkish-tileb_54: -4898472286620047206
+      steampunkish-tileb_55: -6669339409499975319
+      steampunkish-tileb_56: 4033430643730934744
+      steampunkish-tileb_57: -344995951519412617
+      steampunkish-tileb_58: 1381708917664258170
+      steampunkish-tileb_59: 9020423088496679696
+      steampunkish-tileb_6: -8086468081103527326
+      steampunkish-tileb_60: -6005073804480590413
+      steampunkish-tileb_61: 5873742137540615929
+      steampunkish-tileb_62: 5335127643628045525
+      steampunkish-tileb_63: -466853536993617382
+      steampunkish-tileb_64: -6966941963005388818
+      steampunkish-tileb_65: -819573358073376732
+      steampunkish-tileb_66: 5481270852677653848
+      steampunkish-tileb_67: -6294791146816521211
+      steampunkish-tileb_68: 4177832157018383465
+      steampunkish-tileb_69: 7682315195334986960
+      steampunkish-tileb_7: 8871973405284758346
+      steampunkish-tileb_70: 2168298723216825047
+      steampunkish-tileb_71: 7512509317270374168
+      steampunkish-tileb_72: 4315119053532209370
+      steampunkish-tileb_73: -2842635137121224009
+      steampunkish-tileb_74: 183854719402818635
+      steampunkish-tileb_75: -3315882756421411880
+      steampunkish-tileb_76: -1314682154542812742
+      steampunkish-tileb_77: 557127194570209490
+      steampunkish-tileb_78: -2120743420802466404
+      steampunkish-tileb_79: -1119188495345370689
+      steampunkish-tileb_8: -6344008503205984093
+      steampunkish-tileb_80: -7180914704710014428
+      steampunkish-tileb_81: -7458185987486724011
+      steampunkish-tileb_82: 5761974153935152159
+      steampunkish-tileb_83: -4506178146972140558
+      steampunkish-tileb_84: 5855998515653054188
+      steampunkish-tileb_85: 4770873533150614705
+      steampunkish-tileb_86: -7644253587293709733
+      steampunkish-tileb_87: -4920791475819109076
+      steampunkish-tileb_88: 3769454513489198733
+      steampunkish-tileb_89: -7841916895071978006
+      steampunkish-tileb_9: 2941871229339098716
+      steampunkish-tileb_90: 3463528917363238903
+      steampunkish-tileb_91: 3136873347457273854
+      steampunkish-tileb_92: 9129192383683218049
+      steampunkish-tileb_93: 6233007470581448426
+      steampunkish-tileb_94: 4907811604992410820
+      steampunkish-tileb_95: -1575305519164740238
+      steampunkish-tileb_96: 6539234899175242164
+      steampunkish-tileb_97: 5309514463334222115
+      steampunkish-tileb_98: 5196328510617516761
+      steampunkish-tileb_99: -2590475275882942664
+      tree: -7028075773122503726
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
