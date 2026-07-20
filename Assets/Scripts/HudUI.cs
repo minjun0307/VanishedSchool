@@ -71,6 +71,7 @@ public class HudUI : MonoBehaviour
     void Start()
     {
         Debug.Log("testVersionManager");
+        Debug.Log("testVersionManager");
         //m_btngo.onClick.AddListener(onclickad);
     }
 
