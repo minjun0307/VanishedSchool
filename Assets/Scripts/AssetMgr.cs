@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 // 아이템/인벤토리를 관리하는 싱글톤 (GameMgr와 같은 패턴)
-// 추후 아이템 시스템이 생기면 아이템 이름(또는 ID 문자열)을 그대로 넣어서 쓰면 됩니다.
-// 예) AssetMgr.Inst().AddItem("Key");  AssetMgr.Inst().HasItem("Flashlight")
+// 인벤토리는 고정 4칸이며, 그중 한 칸을 '장착'해서 F키로 사용합니다.
+// 예) AssetMgr.Inst().AddItem(itemData);  AssetMgr.Inst().HasItem("Key")
 public class AssetMgr
 {
     static AssetMgr inst = new AssetMgr();
@@ -15,32 +16,101 @@ public class AssetMgr
         return inst;
     }
 
-    // 플레이어가 수집한 아이템 목록 (= 플레이어의 인벤토리)
-    public List<string> m_Inventory = new List<string>();
+    public const int SlotCount = 4;   // 인벤토리 최대 칸 수
 
-    public void AddItem(string itemName)
+    // 세이브 파일에는 아이템의 m_Id 문자열만 기록되므로, 로드할 때 이 경로에서 에셋을 되찾습니다.
+    // (ItemData 에셋은 Assets/Resources/Items/ 아래에 "파일명 = m_Id" 로 저장해야 합니다)
+    const string ItemPath = "Items/";
+
+    ItemData[] m_Slots = new ItemData[SlotCount];
+    int m_EquippedIndex = 0;
+
+    public int EquippedIndex { get { return m_EquippedIndex; } }
+
+    // 빈 슬롯을 앞에서부터 찾아 넣고 그 칸 번호를 반환합니다. 4칸이 모두 차 있으면 -1.
+    public int AddItem(ItemData item)
     {
-        m_Inventory.Add(itemName);
+        if (item == null)
+            return -1;
+
+        for (int i = 0; i < SlotCount; i++)
+        {
+            if (m_Slots[i] == null)
+            {
+                m_Slots[i] = item;
+                return i;
+            }
+        }
+        return -1;
     }
 
-    public bool HasItem(string itemName)
+    public ItemData GetSlot(int index)
     {
-        return m_Inventory.Contains(itemName);
+        if (index < 0 || index >= SlotCount)
+            return null;
+
+        return m_Slots[index];
     }
 
-    public void RemoveItem(string itemName)
+    public ItemData GetEquipped()
     {
-        m_Inventory.Remove(itemName);
+        return m_Slots[m_EquippedIndex];
+    }
+
+    public void Equip(int index)
+    {
+        if (index < 0 || index >= SlotCount)
+            return;
+
+        m_EquippedIndex = index;
+    }
+
+    public void ClearSlot(int index)
+    {
+        if (index < 0 || index >= SlotCount)
+            return;
+
+        m_Slots[index] = null;
+    }
+
+    // 특정 아이템을 갖고 있는지 확인 (잠긴 방의 열쇠 판정 등에 사용)
+    public bool HasItem(string itemId)
+    {
+        for (int i = 0; i < SlotCount; i++)
+        {
+            if (m_Slots[i] != null && m_Slots[i].m_Id == itemId)
+                return true;
+        }
+        return false;
     }
 
     // ── 세이브/로드 연동 (SaveFileMgr가 호출) ──
+    // 항상 길이 4의 목록을 만들고, 빈 칸은 빈 문자열로 채워 칸 위치를 그대로 보존합니다.
     public List<string> GetInventoryForSave()
     {
-        return new List<string>(m_Inventory);
+        List<string> ids = new List<string>(SlotCount);
+        for (int i = 0; i < SlotCount; i++)
+            ids.Add(m_Slots[i] != null ? m_Slots[i].m_Id : "");
+
+        return ids;
     }
 
     public void SetInventoryFromLoad(List<string> items)
     {
-        m_Inventory = items != null ? new List<string>(items) : new List<string>();
+        for (int i = 0; i < SlotCount; i++)
+        {
+            string id = (items != null && i < items.Count) ? items[i] : "";
+            m_Slots[i] = string.IsNullOrEmpty(id) ? null : LoadItem(id);
+        }
+        m_EquippedIndex = 0;
+    }
+
+    ItemData LoadItem(string itemId)
+    {
+        ItemData data = Resources.Load<ItemData>(ItemPath + itemId);
+        if (data == null)
+            Debug.LogWarning("아이템 에셋을 찾을 수 없습니다: Resources/" + ItemPath + itemId);
+
+        return data;
     }
 }
