@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestItem
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   m_Id: testitem
-  m_Name: 
+  m_Name: Testitem
   m_Icon: {fileID: -5727340022683133944, guid: f9263e3b9bdba144395a95fc063fed00, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_Desc: 

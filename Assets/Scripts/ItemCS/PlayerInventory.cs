@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class PlayerInventory : MonoBehaviour
 {
     public Text m_PromptText;   // "[F] OO 줍기" 안내 텍스트 (비워두면 표시 생략)
+    public InvenP m_InvenPanel; // 인벤토리 패널 (열어둔 채로 주웠을 때 갱신용, 비워두면 생략)
 
     List<ItemPickup> m_Nearby = new List<ItemPickup>();   // 트리거 범위 안에 있는 아이템들
     PlayerMove m_Move;
@@ -110,32 +111,23 @@ public class PlayerInventory : MonoBehaviour
         Debug.Log("획득: " + data.m_Name + " (슬롯 " + (slot + 1) + ")");
         m_Nearby.Remove(pickup);
         pickup.Consume();
+        RefreshPanel();
     }
 
-    // 장착한 아이템 사용 — 지금은 종류별 분기 자리만 만들어두고 로그만 남깁니다.
+    // 장착한 아이템 사용 — 실제 처리는 AssetMgr.UseSlot에 모여 있습니다.
     void UseEquipped()
     {
         AssetMgr mgr = AssetMgr.Inst();
-        ItemData data = mgr.GetEquipped();
-        if (data == null)
-        {
-            Debug.Log((mgr.EquippedIndex + 1) + "번 슬롯이 비어 있습니다");
-            return;
-        }
+        mgr.UseSlot(mgr.EquippedIndex);
+        RefreshPanel();
+    }
 
-        switch (data.m_Type)
-        {
-            case ItemType.Key:
-                Debug.Log("사용: " + data.m_Name + " (Key) — 잠긴 문 해제는 다음 단계");
-                break;
-            case ItemType.Tool:
-                Debug.Log("사용: " + data.m_Name + " (Tool)");
-                break;
-            case ItemType.Consumable:
-                Debug.Log("사용: " + data.m_Name + " (Consumable) — 슬롯 비움");
-                mgr.ClearSlot(mgr.EquippedIndex);
-                break;
-        }
+    // B키 메뉴는 플레이어 이동을 막지 않으므로 인벤토리를 열어둔 채로 주울 수 있습니다.
+    // 그 경우에도 목록이 바로 바뀌도록 열려 있을 때만 다시 그려줍니다.
+    void RefreshPanel()
+    {
+        if (m_InvenPanel != null && m_InvenPanel.gameObject.activeInHierarchy)
+            m_InvenPanel.Refresh();
     }
 
     void ShowPrompt(ItemPickup target)

@@ -73,6 +73,32 @@ public class AssetMgr
         m_Slots[index] = null;
     }
 
+    // 슬롯의 아이템을 사용합니다 (F키와 인벤토리 패널 클릭 양쪽에서 호출).
+    // 지금은 종류별 분기 자리만 만들어두고, 소모품만 실제로 칸을 비웁니다.
+    public void UseSlot(int index)
+    {
+        ItemData data = GetSlot(index);
+        if (data == null)
+        {
+            Debug.Log((index + 1) + "번 슬롯이 비어 있습니다");
+            return;
+        }
+
+        switch (data.m_Type)
+        {
+            case ItemType.Key:
+                Debug.Log("사용: " + data.m_Name + " (Key) — 잠긴 문 해제는 다음 단계");
+                break;
+            case ItemType.Tool:
+                Debug.Log("사용: " + data.m_Name + " (Tool)");
+                break;
+            case ItemType.Consumable:
+                Debug.Log("사용: " + data.m_Name + " (Consumable) — 슬롯 비움");
+                ClearSlot(index);
+                break;
+        }
+    }
+
     // 특정 아이템을 갖고 있는지 확인 (잠긴 방의 열쇠 판정 등에 사용)
     public bool HasItem(string itemId)
     {
