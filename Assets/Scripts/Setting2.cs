@@ -19,6 +19,7 @@ public class Setting2 : MonoBehaviour
         m_btnSave.onClick.AddListener(onclickbtnSave);
         m_btnLoad.onClick.AddListener(onclickbtnload);
         m_btnInventory.onClick.AddListener(onclickbtnInven);
+
     }
     public void Activate()
     {
@@ -99,7 +100,7 @@ public class Setting2 : MonoBehaviour
         {
             TurnOFF();
             gameObject.SetActive(false);
-            m_monsterMoves.m_IsActive = true;
+            //m_monsterMoves.m_IsActive = true;
         }
 
     }

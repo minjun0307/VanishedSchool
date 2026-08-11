@@ -17,5 +17,6 @@ public class GameMgr
     public Menu m_TempMenu;
     public GameScene m_GameScene ;
     public MonsterScene m_MonsterScene;
+    public ItemSpawner m_ItemSpawner;   // 맵 아이템 스포너 (세이브/로드에서 맵 아이템을 복원할 때 사용)
 
 }

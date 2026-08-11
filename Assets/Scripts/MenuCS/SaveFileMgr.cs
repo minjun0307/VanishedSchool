@@ -2,6 +2,16 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
+// 맵 위에 아직 주워지지 않고 남아 있는 아이템 하나의 정보.
+// JsonUtility가 목록 안의 클래스를 저장하려면 [System.Serializable]이 반드시 필요합니다.
+[System.Serializable]
+public class MapItemSave
+{
+    public string id;   // ItemData.m_Id (Resources/Items/ 에서 되찾을 때 쓰는 키)
+    public float x;
+    public float y;
+}
+
 // 세이브 파일에 기록되는 데이터 (JsonUtility로 txt에 저장됨)
 [System.Serializable]
 public class SaveData
@@ -23,6 +33,9 @@ public class SaveData
 
     // ── 인벤토리 (AssetMgr) — 아이템 시스템이 생기면 그대로 사용 ──
     public List<string> inventory = new List<string>();
+
+    // ── 맵에 남아 있는 아이템 (ItemSpawner) ──
+    public List<MapItemSave> mapItems = new List<MapItemSave>();
 }
 
 // SaveFile1.txt ~ SaveFile4.txt 파일 입출력을 전담하는 정적 클래스
@@ -93,6 +106,11 @@ public static class SaveFileMgr
         // 인벤토리 (수집한 아이템 목록)
         data.inventory = AssetMgr.Inst().GetInventoryForSave();
 
+        // 맵에 아직 남아 있는 아이템 (종류 + 좌표)
+        ItemSpawner spawner = GameMgr.Inst().m_ItemSpawner;
+        if (spawner != null)
+            data.mapItems = spawner.GetPickupsForSave();
+
         File.WriteAllText(GetPath(slotNum), JsonUtility.ToJson(data, true));
         Debug.Log("저장 완료: " + GetPath(slotNum));
     }
@@ -154,6 +172,11 @@ public static class SaveFileMgr
 
         // 인벤토리 복원
         AssetMgr.Inst().SetInventoryFromLoad(data.inventory);
+
+        // 맵 아이템 복원 (지금 맵에 있는 것을 모두 치우고 저장된 목록대로 다시 배치)
+        ItemSpawner spawner = GameMgr.Inst().m_ItemSpawner;
+        if (spawner != null)
+            spawner.RestorePickups(data.mapItems);
 
         // 사망 패널에서 로드한 경우: 게임 상태로 복귀
         // (GameState 진입 콜백이 플레이어 활성화/몬스터 FSM 초기화/패널 닫기/사운드 복원을 일괄 처리)

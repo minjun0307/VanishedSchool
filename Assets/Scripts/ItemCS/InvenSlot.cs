@@ -2,8 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // 인벤토리 패널에 아이템 1개당 하나씩 생성되는 UI 프리팹 (SaveSlot과 같은 방식)
-// 빈 칸은 아예 만들지 않으므로 목록 순서와 슬롯 번호가 서로 다를 수 있습니다.
-// 그래서 자기가 담당하는 AssetMgr 슬롯 번호를 직접 들고 있어야 합니다.
+// InvenP가 이 UI를 ItemSlotGroup의 Item1~Item4 칸 밑에 자식으로 만들어 붙입니다.
+// 클릭했을 때 어느 칸인지 알려줘야 하므로 담당 AssetMgr 슬롯 번호를 직접 들고 있습니다.
 public class InvenSlot : MonoBehaviour
 {
     public Image m_Icon;       // 아이템 아이콘
@@ -26,13 +26,6 @@ public class InvenSlot : MonoBehaviour
 
         if (m_Button != null)
             m_Button.onClick.AddListener(OnClickSlot);
-    }
-
-    // 장착 중인 슬롯을 다른 색으로 표시할 때 사용합니다.
-    public void SetNameColor(Color color)
-    {
-        if (m_NameText != null)
-            m_NameText.color = color;
     }
 
     void OnClickSlot()

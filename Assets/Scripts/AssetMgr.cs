@@ -131,7 +131,8 @@ public class AssetMgr
         m_EquippedIndex = 0;
     }
 
-    ItemData LoadItem(string itemId)
+    // m_Id 문자열로 아이템 에셋을 되찾습니다 (ItemSpawner의 맵 아이템 복원에서도 사용).
+    public ItemData LoadItem(string itemId)
     {
         ItemData data = Resources.Load<ItemData>(ItemPath + itemId);
         if (data == null)

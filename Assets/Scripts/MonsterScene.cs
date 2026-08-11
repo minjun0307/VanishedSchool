@@ -18,6 +18,7 @@ public class MonsterScene : MonoBehaviour
     {
         m_MonsterFSM.Initialize(Callback_ReadyState, Callback_AlertState, Callback_ChasingState, Callback_PatrolState);
         m_MonsterFSM.SetReadyState();
+
     }
     void Callback_ReadyState()
     { //게임 시작하면 ready상태로 시작하고 2층에서 몬스터 배회    주변에서 달리기사용시 발소리듣고 경계

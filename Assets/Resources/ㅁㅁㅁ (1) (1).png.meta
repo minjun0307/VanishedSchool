@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 164ce4cc6c5be3841892105cdbfb54d0
+guid: bf52da63c84800f4d9d223ecd884270b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2296040313557297925
-    second: "\u3141\u3141\u3141 (1)_0"
-  - first:
-      213: -8123462289833572539
-    second: "\u3141\u3141\u3141 (1)_1"
-  - first:
-      213: 2483448744895946726
-    second: "\u3141\u3141\u3141 (1)_2"
-  - first:
-      213: 8624992797225988504
-    second: "\u3141\u3141\u3141 (1)_3"
+      213: -4222670569618123377
+    second: "\u3141\u3141\u3141 (1) (1)_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,89 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uC218\uC815\uB41C \uC774\uBBF8\uC9C0_1"
+      name: "\u3141\u3141\u3141 (1) (1)_0"
       rect:
         serializedVersion: 2
-        x: 983
-        y: 5878
-        width: 3907
-        height: 1312
+        x: 19
+        y: 4
+        width: 3903
+        height: 1318
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 128, y: 101, z: 125, w: 99}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bf4d070ff73d220e0800000000000000
-      internalID: -2296040313557297925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uC218\uC815\uB41C \uC774\uBBF8\uC9C0_2"
-      rect:
-        serializedVersion: 2
-        x: 1028
-        y: 4479
-        width: 3804
-        height: 1220
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 86, y: 49, z: 66, w: 39}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 547403c561aa34f80800000000000000
-      internalID: -8123462289833572539
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uC218\uC815\uB41C \uC774\uBBF8\uC9C0_3"
-      rect:
-        serializedVersion: 2
-        x: 1038
-        y: 3040
-        width: 2638
-        height: 814
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ef9961c97bf67220800000000000000
-      internalID: 2483448744895946726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uC218\uC815\uB41C \uC774\uBBF8\uC9C0_4"
-      rect:
-        serializedVersion: 2
-        x: 884
-        y: 1157
-        width: 4309
-        height: 1020
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89135fc704122b770800000000000000
-      internalID: 8624992797225988504
+      spriteID: f855a665d7f0665c0800000000000000
+      internalID: -4222670569618123377
       vertices: []
       indices: 
       edges: []
@@ -213,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d034d0a1ba820f845b4967c69914dc39
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -221,18 +146,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      "\u3141\u3141\u3141 (1)_0": -2296040313557297925
-      "\u3141\u3141\u3141 (1)_1": -8123462289833572539
-      "\u3141\u3141\u3141 (1)_2": 2483448744895946726
-      "\u3141\u3141\u3141 (1)_3": 8624992797225988504
-      "\uC218\uC815\uB41C \uC774\uBBF8\uC9C0_1": -2296040313557297925
-      "\uC218\uC815\uB41C \uC774\uBBF8\uC9C0_2": -8123462289833572539
-      "\uC218\uC815\uB41C \uC774\uBBF8\uC9C0_3": 2483448744895946726
-      "\uC218\uC815\uB41C \uC774\uBBF8\uC9C0_4": 8624992797225988504
+      "\u3141\u3141\u3141 (1) (1)_0": -4222670569618123377
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -9,7 +9,6 @@ public class SettingP : MonoBehaviour
     public Toggle m_SFXTog;
     public Text m_BgmTxt;
     public Text m_SfxTxt;
-    public Dropdown m_ResolutionDrop;
     public List<string> m_Res = new List<string>(); 
     public int m_ResIndex = 0;
     public Text m_Restext;
@@ -19,21 +18,13 @@ public class SettingP : MonoBehaviour
         
         m_BGMTog.onValueChanged.AddListener(SettovcBgmTog);
         m_SFXTog.onValueChanged.AddListener(SettovcSfxTog);
-        m_ResolutionDrop.onValueChanged.AddListener(SetovcResDrop);
 
         SettovcBgmTog(true);
         SettovcSfxTog(true);
 
         // 해상도 목록은 SetovcResDrop의 인덱스 처리와 순서가 반드시 일치해야 하므로
         // 인스펙터가 아닌 코드에서 직접 채웁니다. (0: 1920x1080, 1: 1440x1080, 2: 1280x720)
-        m_Res.Clear();
-        m_Res.Add("1920 x 1080");
-        m_Res.Add("1440 x 1080");
-        m_Res.Add("1280 x 720");
 
-        m_ResolutionDrop.ClearOptions();
-        m_ResolutionDrop.AddOptions(m_Res);
-        m_ResolutionDrop.RefreshShownValue();
     }
     public void Active()
     {
