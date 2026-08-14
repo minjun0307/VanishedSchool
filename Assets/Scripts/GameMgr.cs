@@ -18,5 +18,6 @@ public class GameMgr
     public GameScene m_GameScene ;
     public MonsterScene m_MonsterScene;
     public ItemSpawner m_ItemSpawner;   // 맵 아이템 스포너 (세이브/로드에서 맵 아이템을 복원할 때 사용)
+    public FogMgr m_FogMgr;             // 소화기 연막 관리자 (몬스터가 감지 차단 판정에 사용)
 
 }

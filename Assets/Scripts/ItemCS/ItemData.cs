@@ -3,6 +3,11 @@ using UnityEngine;
 // 아이템 종류 — F로 사용했을 때 어떤 효과로 분기할지 결정합니다.
 public enum ItemType { Key, Tool, Consumable }
 
+// 아이템을 사용했을 때 함께 발동하는 특수 효과.
+// ItemType이 '소모 규칙'(쓰면 칸이 비는지)이라면, 이쪽은 '무슨 일이 일어나는지'입니다.
+// 두 가지가 별개라서 나눠뒀습니다. (예: 소화기 = Consumable + Fog)
+public enum ItemEffect { None, Fog }
+
 // 아이템 한 종류의 정보를 담는 스크립터블 오브젝트 (DeathMessageData와 같은 방식).
 // Create > Game > Item Data 로 에셋을 만들며,
 // 반드시 Assets/Resources/Items/ 아래에 "파일명 = m_Id" 로 저장해야
@@ -14,5 +19,6 @@ public class ItemData : ScriptableObject
     public string m_Name;    // 화면에 표시할 이름
     public Sprite m_Icon;    // 인벤토리 아이콘 겸 맵에 놓였을 때의 스프라이트
     public ItemType m_Type;
+    public ItemEffect m_Effect;   // 사용했을 때 발동할 특수 효과 (없으면 None)
     [TextArea(2, 4)] public string m_Desc;
 }

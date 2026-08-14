@@ -4,9 +4,10 @@ using UnityEngine.UI;
 
 // 인벤토리 패널 — 가지고 있는 아이템을 ItemSlotGroup의 Item1~Item4 칸에 하나씩 넣어 보여줍니다.
 // 아이템 UI는 담당하는 칸(Item1~Item4)의 '자식'으로 생성되고, 그 칸이 비면 자식이 사라집니다.
-// 아이템을 클릭하면 DecidePanel이 켜지면서 타입에 맞는 질문을 띄웁니다.
-//  - Key / Tool  → "OO을(를) 장착하시겠습니까?"  → btnEquip이 장착
-//  - Consumable  → "OO을(를) 사용하시겠습니까?"  → btnEquip이 사용(칸 비움)
+// 아이템을 클릭하면 DecidePanel이 켜지면서 상황에 맞는 질문을 띄웁니다.
+//  - 장착한 게 없을 때  → "OO을(를) 장착하시겠습니까?"  → btnEquip이 장착
+//  - 이미 장착 중일 때  → "OO(으)로 교체하시겠습니까?"  → btnEquip이 두 칸의 아이템을 맞바꿈
+// 이 패널은 장착만 담당합니다. 아이템을 실제로 쓰는 것은 장착한 뒤 게임 화면에서 F키입니다.
 // (B키 → 메뉴 → 인벤토리 버튼으로 Setting2가 이 패널을 켜줍니다)
 public class InvenP : MonoBehaviour
 {
@@ -106,43 +107,38 @@ public class InvenP : MonoBehaviour
         rt.localScale = Vector3.one;
     }
 
-    // 아이템을 클릭했을 때 — 결정 패널을 켜고 타입에 맞는 질문을 띄웁니다.
+    // 아이템을 클릭했을 때 — 결정 패널을 켜고 상황에 맞는 질문을 띄웁니다.
+    // 이 패널에서는 '장착'만 합니다. 실제 사용은 장착한 뒤 게임 화면에서 F키로 합니다.
     void OnClickSlot(int slotIndex)
     {
-        ItemData data = AssetMgr.Inst().GetSlot(slotIndex);
+        AssetMgr mgr = AssetMgr.Inst();
+        ItemData data = mgr.GetSlot(slotIndex);
         if (data == null)
             return;
 
         m_PendingSlot = slotIndex;
 
-        // 소모품은 "사용", 나머지(Key/Tool)는 "장착"으로 질문과 버튼 글자를 함께 바꿉니다.
-        bool isUse = data.m_Type == ItemType.Consumable;
+        // 이미 다른 아이템을 장착 중이면 '교체', 아무것도 없으면 '장착'으로 문구를 바꿉니다.
+        bool isSwap = mgr.IsEquipped && slotIndex != mgr.EquippedIndex;
 
         if (m_QuestionTxt != null)
-            m_QuestionTxt.text = data.m_Name + (isUse ? "을(를) 사용하시겠습니까?" : "을(를) 장착하시겠습니까?");
+            m_QuestionTxt.text = data.m_Name + (isSwap ? "(으)로 교체하시겠습니까?" : "을(를) 장착하시겠습니까?");
 
         if (m_btnEquipTxt != null)
-            m_btnEquipTxt.text = isUse ? "사용" : "장착";
+            m_btnEquipTxt.text = isSwap ? "교체" : "장착";
 
         if (m_DecidePanel != null)
             m_DecidePanel.SetActive(true);
     }
 
-    // btnEquip — 소모품이면 사용, 나머지는 장착합니다.
+    // btnEquip — 고른 아이템을 장착합니다.
+    // 이미 장착 중이던 아이템이 있으면 두 칸의 아이템이 서로 자리를 맞바꿉니다.
     void OnClickEquip()
     {
-        AssetMgr mgr = AssetMgr.Inst();
-        ItemData data = mgr.GetSlot(m_PendingSlot);   // 슬롯 번호가 -1이면 null이 돌아옵니다
-        if (data != null)
-        {
-            if (data.m_Type == ItemType.Consumable)
-                mgr.UseSlot(m_PendingSlot);   // 효과 적용 후 칸을 비웁니다
-            else
-                mgr.Equip(m_PendingSlot);     // 1~4 숫자키 장착과 같은 처리
-        }
+        AssetMgr.Inst().EquipOrSwap(m_PendingSlot);   // 슬롯 번호가 -1이면 아무 일도 하지 않습니다
 
         CloseDecidePanel();
-        Refresh();   // 사용한 아이템 제거를 화면에 반영
+        Refresh();   // 맞바뀐 칸 위치를 화면에 반영
     }
 
     // Cancel — 아무것도 하지 않고 결정 패널만 닫습니다.

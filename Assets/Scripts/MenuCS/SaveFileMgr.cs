@@ -178,6 +178,11 @@ public static class SaveFileMgr
         if (spawner != null)
             spawner.RestorePickups(data.mapItems);
 
+        // 소화기 연막은 저장하지 않으므로, 불러온 뒤 화면에 남지 않도록 모두 치웁니다.
+        FogMgr fogMgr = GameMgr.Inst().m_FogMgr;
+        if (fogMgr != null)
+            fogMgr.ClearAll();
+
         // 사망 패널에서 로드한 경우: 게임 상태로 복귀
         // (GameState 진입 콜백이 플레이어 활성화/몬스터 FSM 초기화/패널 닫기/사운드 복원을 일괄 처리)
         if (gameScene.m_BattleFSM.IsResultState())
