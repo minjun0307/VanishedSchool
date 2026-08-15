@@ -45,12 +45,19 @@ public class MonsterScene : MonoBehaviour
     {
         StopChaseBgm();   // 추격에서 경계로 바뀌면 추격 음악 끄기
 
+        if (m_MonsterMoves == null)
+            return;
+
+        m_MonsterMoves.OnAlert();
+        StopAlertRoutine();
+
+        // 문소리를 듣고 온 경계라면 그 층을 한 바퀴 훑을 때까지 유지되므로
+        // 시간제 복귀 타이머를 걸지 않습니다. (수색이 끝나면 몬스터가 스스로 배회로 돌아감)
+        if (m_MonsterMoves.AlertReasonNow == AlertReason.RoomNoise)
+            return;
+
         // 소화기 연막에 들어가 플레이어를 놓쳤을 때 이 상태로 들어옵니다.
         // 추격을 풀고 제자리에 멈춘 뒤, m_AlertTime초가 지나면 배회로 돌아갑니다.
-        if (m_MonsterMoves != null)
-            m_MonsterMoves.OnAlert();
-
-        StopAlertRoutine();
         m_AlertRoutine = StartCoroutine(AlertRoutine());
     }
     void Callback_ChasingState()
@@ -80,6 +87,13 @@ public class MonsterScene : MonoBehaviour
             StopCoroutine(m_AlertRoutine);
             m_AlertRoutine = null;
         }
+    }
+
+    // 플레이어가 방에서 나왔을 때 그 층(1~3)을 몬스터에게 알립니다. (PlayerMove.ExitRoom에서 호출)
+    public void NoticeFloor(int floor)
+    {
+        if (m_MonsterMoves != null)
+            m_MonsterMoves.NoticeFloor(floor);
     }
 
     // 추격이 아닌 상태로 바뀔 때 추격 음악 정지 (사망 시 GameScene에서도 호출)

@@ -1391,6 +1391,7 @@ GameObject:
   - component: {fileID: 93667385}
   - component: {fileID: 93667386}
   - component: {fileID: 93667387}
+  - component: {fileID: 93667388}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1627,6 +1628,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
   m_PromptText: {fileID: 1024444426}
   m_InvenPanel: {fileID: 1224225897}
+--- !u!114 &93667388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93667379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97935eba18a8bed43aac13b5b56c52ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrumbTrail
+  m_DropDistance: 0.6
+  m_Lifetime: 12
+  m_MaxCount: 60
+  m_DrawGizmos: 1
 --- !u!1 &101501480
 GameObject:
   m_ObjectHideFlags: 0

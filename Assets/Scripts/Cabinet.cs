@@ -71,6 +71,12 @@ public class Cabinet : MonoBehaviour
         if (gameScene != null && gameScene.m_HudUI != null)
             gameScene.m_HudUI.CloseMenu();
 
+        // 숨는 순간 플레이어가 흘려둔 과자(발자취)는 전부 사라집니다.
+        // 몬스터가 마지막 과자를 붙잡고 있지 않도록 아래 수색 지시보다 먼저 지웁니다.
+        CrumbTrail trail = player.GetComponent<CrumbTrail>();
+        if (trail != null)
+            trail.Clear();
+
         // 쫓기던 중에 숨는 데 성공했다면: 몬스터는 추격을 포기하고(Patrol) 캐비넷까지 찾아왔다가
         // 다른 층으로 떠납니다. 쫓기던 중이 아니었다면 몬스터는 하던 배회를 그대로 계속합니다.
         if (wasChasing)

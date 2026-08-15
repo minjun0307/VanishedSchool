@@ -11,6 +11,13 @@ public class RoomSpotInfo
     public int m_Floor = 1;    // 그 룸이 속한 층 (1~3) — 텔레포트 후 배회 반경 결정용
 }
 
+// 경계(Alert) 상태에 들어온 이유 — 이유에 따라 행동이 달라집니다.
+public enum AlertReason
+{
+    LostPlayer,   // 연막 등으로 플레이어를 놓침 → 그 자리에 잠시 멈춰 있음
+    RoomNoise     // 플레이어가 방에서 나오는 소리를 들음 → 그 층을 한 바퀴 수색
+}
+
 public class MonsterMoves : MonoBehaviour
 {
     public Transform player;         // 쫓아갈 플레이어의 Transform
@@ -95,6 +102,15 @@ public class MonsterMoves : MonoBehaviour
     private const float StairArriveThreshold = 0.5f;   // 추격 중 계단 Spot 도착 판정 거리
 
     // ── 수색(캐비넷 등 특정 지점으로 가보기) 상태 ──
+    private CrumbTrail m_CrumbTrail;    // 플레이어가 흘리는 과자(발자취) — 추격 중 경로 추종에 사용
+    private const float CrumbArriveThreshold = 0.25f;   // 과자 도착 판정 거리 (과자 간격보다 작아야 떨리지 않음)
+
+    // ── 문소리(방 출입) 감지 ──
+    private int m_NoticedFloor;         // 플레이어가 방에서 나온 층 (0이면 들은 소리 없음)
+    private AlertReason m_AlertReason;  // 지금 경계 상태에 들어온 이유
+    private int m_SweepPhase;           // 경계 수색 단계: 0 = 최소 x로, 1 = 최대 x로
+    private float m_SweepElapsed;       // 경계 수색을 시작한 뒤 흐른 시간 (제한 시간 확인용)
+
     private bool m_Searching;           // 수색 중이면 배회 대신 수색 지점으로 이동
     private Vector2 m_SearchPos;        // 수색할 좌표
     private int m_SearchFloor;          // 그 좌표가 있는 층
@@ -140,16 +156,126 @@ public class MonsterMoves : MonoBehaviour
         m_PlayerMissed = false;
         m_PatrolFailCount = 0;   // 플레이어를 감지했으므로 배회 실패 누적 리셋
         m_Searching = false;     // 플레이어를 다시 찾았으니 수색은 필요 없음
+        m_NoticedFloor = 0;      // 직접 찾았으므로 문소리 정보는 더 이상 필요 없음
     }
 
-    // 플레이어를 놓쳐 경계 상태에 들어갈 때 — 추격을 멈추고 그 자리에 섭니다.
-    // 일정 시간 뒤 배회로 되돌리는 타이머는 MonsterScene이 돌립니다.
+    // 경계 상태 진입 — 이유(m_AlertReason)에 따라 행동이 갈립니다.
+    // LostPlayer : 추격을 멈추고 그 자리에 섭니다. (일정 시간 뒤 배회 복귀 타이머는 MonsterScene이 돌림)
+    // RoomNoise  : 문소리가 난 층을 한 바퀴 훑는 수색을 시작합니다.
     public void OnAlert()
     {
         m_Chasing = false;
         m_Patrol = false;
         m_Alert = true;
+
+        // 문소리를 듣고 온 경계는 그 층을 훑고 다녀야 하므로 멈추지 않습니다.
+        if (m_AlertReason == AlertReason.RoomNoise)
+        {
+            m_SweepPhase = 0;
+            m_SweepElapsed = 0f;
+            return;
+        }
+
         movement = Vector2.zero;
+    }
+
+    // 지금 경계 상태에 들어온 이유 (MonsterScene이 복귀 타이머를 걸지 판단할 때 사용)
+    public AlertReason AlertReasonNow { get { return m_AlertReason; } }
+
+    // 플레이어가 방에서 나오는 소리를 들었을 때, 그 방이 있는 층(1~3)을 전달받습니다.
+    // 다른 층이면 계단으로 그 층까지 이동하고, 도착하는 순간 경계(수색) 상태로 바뀝니다.
+    public void NoticeFloor(int floor)
+    {
+        if (!m_IsActive || m_Chasing)
+            return;   // 아직 활동 전이거나, 이미 추격 중이라면 더 확실한 정보를 갖고 있으므로 무시
+
+        floor = Mathf.Clamp(floor, 1, 3);
+
+        if (floor == GetCurrentFloor())
+        {
+            m_NoticedFloor = 0;
+            BeginNoiseAlert();
+            return;
+        }
+
+        m_NoticedFloor = floor;   // 배회 처리에서 이 층으로 향합니다
+        m_Searching = false;      // 캐비넷 수색보다 방금 들은 소리를 우선합니다
+    }
+
+    // 문소리 경계 상태로 진입합니다.
+    void BeginNoiseAlert()
+    {
+        m_AlertReason = AlertReason.RoomNoise;
+        m_monsterFSM.SetAlertState();
+    }
+
+    // 문소리를 들은 층으로 계단을 타고 이동합니다. 도착하면 경계(수색) 상태로 넘어갑니다.
+    // 이동을 처리했으면 true를 돌려주어 평소 배회가 끼어들지 않게 합니다.
+    bool MoveToNoticedFloor()
+    {
+        if (m_NoticedFloor == 0)
+            return false;
+
+        if (m_NoticedFloor == GetCurrentFloor())
+        {
+            m_NoticedFloor = 0;
+            movement = Vector2.zero;
+            BeginNoiseAlert();
+            return true;
+        }
+
+        if (!MoveToFloorViaStair(m_NoticedFloor))
+        {
+            m_NoticedFloor = 0;   // 계단 Spot이 없어 그 층으로 갈 수 없으면 포기
+            return false;
+        }
+
+        return true;
+    }
+
+    // 경계 수색 한 프레임 처리: 현재 층의 배회 반경을 최소 x → 최대 x 로 딱 한 번만 훑습니다.
+    // 다 훑었거나 제한 시간을 넘기면 평소 배회로 돌아갑니다.
+    void AlertSweepStep()
+    {
+        m_SweepElapsed += Time.deltaTime;
+        if (m_SweepElapsed >= m_SearchTimeLimit)
+        {
+            EndAlertSweep();
+            return;
+        }
+
+        float minX, maxX;
+        GetPatrolRange(out minX, out maxX);
+
+        float targetX = m_SweepPhase == 0 ? minX : maxX;
+        float diff = targetX - transform.position.x;
+
+        if (Mathf.Abs(diff) <= ArriveThreshold)
+        {
+            movement = Vector2.zero;
+            AdvanceSweepPhase();
+            return;
+        }
+
+        movement = new Vector2(Mathf.Sign(diff), 0f);
+    }
+
+    // 수색 한 구간이 끝났을 때: 최소 x 도착 → 최대 x로, 최대 x까지 다 훑었으면 수색 종료.
+    void AdvanceSweepPhase()
+    {
+        if (m_SweepPhase == 0)
+            m_SweepPhase = 1;
+        else
+            EndAlertSweep();
+    }
+
+    // 경계 수색을 끝내고 평소 배회로 돌아갑니다.
+    void EndAlertSweep()
+    {
+        m_SweepPhase = 0;
+        m_SweepElapsed = 0f;
+        m_movingToMax = false;   // 새 위치에서 다시 최소 x부터 배회
+        m_monsterFSM.SetPatrolState();
     }
 
     // Update에서는 사용자 입력이나 방향, Transform 계산 등의 '논리 연산'만 처리해야 부드럽습니다.
@@ -176,15 +302,34 @@ public class MonsterMoves : MonoBehaviour
 
                 // 플레이어가 계단으로 다른 층에 올라/내려갔다면, 몬스터도 계단을 타고 따라갑니다.
                 int playerFloor = GetPlayerFloor();
-                if (playerFloor == GetCurrentFloor() || !MoveToFloorViaStair(playerFloor))
+                if (playerFloor != GetCurrentFloor())
+                {
+                    if (!MoveToFloorViaStair(playerFloor))
+                        CalculateDirection();
+                }
+                // 같은 층: 눈에 직접 보이면 곧장 달려가고, 안 보이면 플레이어가 흘린
+                // 과자(발자취)를 따라 실제로 지나간 경로를 되짚어 갑니다.
+                else if (IsPlayerVisible() || !FollowCrumbs())
+                {
                     CalculateDirection();
+                }
             }
         }
         else if (m_Alert)
         {
-            // 경계 상태: 플레이어를 놓친 자리에서 제자리에 멈춰 있습니다.
-            // MonsterScene이 m_AlertTime초 뒤에 배회 상태로 되돌려 줍니다.
-            movement = Vector2.zero;
+            if (m_AlertReason == AlertReason.RoomNoise)
+            {
+                // 문소리를 듣고 온 경계: 그 층을 한 바퀴 훑으며 플레이어를 찾습니다.
+                moveSpeed = patrolSpeed;
+                AlertSweepStep();
+                DetectPlayer();
+            }
+            else
+            {
+                // 플레이어를 놓친 경계: 놓친 자리에서 제자리에 멈춰 있습니다.
+                // MonsterScene이 m_AlertTime초 뒤에 배회 상태로 되돌려 줍니다.
+                movement = Vector2.zero;
+            }
         }
         else
         {
@@ -201,27 +346,38 @@ public class MonsterMoves : MonoBehaviour
 
     public void DetectPlayer()
     {
+        if (IsPlayerVisible())
+        {
+            //Debug.Log("spotlight 시야 범위에 플레이어 감지! 추적을 시작합니다.");
+            m_monsterFSM.SetChasingState();
+        }
+    }
+
+    // 지금 이 순간 플레이어가 몬스터의 시야(스포트라이트가 비추는 범위) 안에 있는지 판정합니다.
+    // 감지(배회 중 추격 시작)와 추격 중 '직선으로 달려갈지' 판단에 함께 사용합니다.
+    public bool IsPlayerVisible()
+    {
         // spotlight(Spot Light 2D)가 실제로 비추는 범위 = 몬스터의 시야로 사용하는 감지 시스템
         // 거리/각도 검사는 순수 계산이라 가볍고, 그 안에 들어왔을 때만 raycast를 수행합니다.
-        if (player == null || m_SpotLight2D == null)
-            return;
+        if (player == null || m_SpotLight2D == null || m_spotLight == null)
+            return false;
 
         // 소화기 연막 안에 서 있으면 아무것도 보이지 않습니다.
         // 거리/각도/시선 검사보다 먼저 걸러서 불필요한 raycast도 아낍니다.
         if (IsBlindedByFog())
-            return;
+            return false;
 
         Vector2 toPlayer = player.position - m_spotLight.position;
         float distance = toPlayer.magnitude;
 
         // 1) 거리 검사 : spotlight의 Outer Radius(빛이 닿는 최대 거리)보다 멀면 감지 실패
         if (distance > m_SpotLight2D.pointLightOuterRadius)
-            return;
+            return false;
 
         // 2) 각도 검사 : 콘의 중심축(m_spotLight.up)과 플레이어 방향 사이 각도가
         //               Outer Angle의 절반을 넘으면 부채꼴 밖이므로 감지 실패
         if (Vector2.Angle(m_spotLight.up, toPlayer) > m_SpotLight2D.pointLightOuterAngle * 0.5f)
-            return;
+            return false;
 
         // 3) 시선 검사 : 빛의 방향으로 raycast를 쏴서 벽 등 장애물에 가려지면 감지 실패.
         //    Queries Start In Colliders가 켜져 있어 몬스터 자신의 콜라이더에 맞을 수 있으므로
@@ -232,13 +388,43 @@ public class MonsterMoves : MonoBehaviour
             if (hit.collider.transform.IsChildOf(transform))
                 continue;   // 몬스터 자신(및 자식 콜라이더)은 무시
 
-            if (hit.collider.CompareTag("Player"))
-            {
-                //Debug.Log("spotlight 시야 범위에 플레이어 감지! 추적을 시작합니다.");
-                m_monsterFSM.SetChasingState();
-            }
-            break;   // 플레이어보다 벽 등이 먼저 맞았으면 시야가 가려진 것
+            return hit.collider.CompareTag("Player");   // 벽 등이 먼저 맞았으면 시야가 가려진 것
         }
+
+        return false;
+    }
+
+    // 플레이어가 흘린 과자를 한 알씩 밟으며 따라갑니다.
+    // 같은 층에 남은 과자가 없으면 false를 돌려주어 호출한 쪽이 직선 추격으로 돌아가게 합니다.
+    bool FollowCrumbs()
+    {
+        CrumbTrail trail = GetCrumbTrail();
+        if (trail == null)
+            return false;
+
+        Vector2 target;
+        if (!trail.TryGetTarget(transform.position, GetCurrentFloor(), out target))
+            return false;
+
+        // 과자에 닿았으면 먹어 치우고 다음 과자를 목표로 삼습니다.
+        if (Vector2.Distance(transform.position, target) <= CrumbArriveThreshold)
+        {
+            trail.Consume();
+            if (!trail.TryGetTarget(transform.position, GetCurrentFloor(), out target))
+                return false;
+        }
+
+        MoveToward(target);
+        return true;
+    }
+
+    // 플레이어에 붙어 있는 CrumbTrail 컴포넌트 (처음 한 번만 찾아 보관)
+    CrumbTrail GetCrumbTrail()
+    {
+        if (m_CrumbTrail == null && player != null)
+            m_CrumbTrail = player.GetComponent<CrumbTrail>();
+
+        return m_CrumbTrail;
     }
 
     // FixedUpdate에서는 Rigidbody를 사용하는 물리적인 이동을 전담해야 끊기거나 속도가 느려지지 않습니다.
@@ -312,6 +498,7 @@ public class MonsterMoves : MonoBehaviour
     public void SearchAt(Vector3 pos, int floor, bool leaveAfter)
     {
         m_Searching = true;
+        m_NoticedFloor = 0;   // 캐비넷 수색 지시가 이전에 들은 문소리보다 우선합니다
         m_SearchPos = pos;
         m_SearchFloor = Mathf.Clamp(floor, 1, 3);
         m_LeaveAfterSearch = leaveAfter;
@@ -407,6 +594,10 @@ public class MonsterMoves : MonoBehaviour
     // 배회 중에는 y로 이동하지 않습니다.
     void Patrol()
     {
+        // 방에서 나오는 소리를 들었으면 평소 배회 대신 그 층부터 가봅니다.
+        if (MoveToNoticedFloor())
+            return;
+
         // 수색 지시를 받았으면 평소 배회 대신 그 지점부터 확인하러 갑니다.
         if (m_Searching)
         {
@@ -604,6 +795,7 @@ public class MonsterMoves : MonoBehaviour
             return;
 
         m_PlayerMissed = true;
+        m_AlertReason = AlertReason.LostPlayer;
         m_monsterFSM.SetAlertState();
     }
 
@@ -625,15 +817,30 @@ public class MonsterMoves : MonoBehaviour
             return;
         }
 
-        // 계단에 닿으면 플레이어처럼 계단 Spot을 통해 층을 이동합니다.
-        // (공격 후 2초 동안은 포탈이 작동하지 않고 아래에서 벽처럼 처리되어 콜라이더에 막힘)
-        // 경계 중에는 그 자리에 서 있어야 하므로 층이동과 배회 단계 진행을 모두 막습니다.
-        // 수색 중에는 목적지가 정해져 있으므로 계단 이동/배회 단계 진행이 끼어들지 않게 막습니다.
-        if (m_IsActive && !m_Chasing && !m_Alert && !m_Searching && !m_HitCooldown && TryUseStairs(collision.collider))
+        if (!m_IsActive)
             return;
 
-        if (m_IsActive && !m_Chasing && !m_Alert && !m_Searching)
-            AdvancePatrolPhase();
+        if (m_Alert)
+        {
+            // 문소리를 듣고 온 경계 수색 중 벽에 막혔다면, 그 방향은 다 훑은 것으로 보고
+            // 다음 단계로 넘어갑니다. (플레이어를 놓친 경계는 그 자리에 서 있어야 하므로 아무것도 안 함)
+            if (m_AlertReason == AlertReason.RoomNoise)
+                AdvanceSweepPhase();
+            return;
+        }
+
+        // 추격 중 / 캐비넷 수색 중 / 문소리를 듣고 특정 층으로 가는 중에는 목적지가 정해져 있으므로
+        // 계단 이동과 배회 단계 진행이 끼어들지 않게 막습니다.
+        if (m_Chasing || m_Searching || m_NoticedFloor != 0)
+            return;
+
+        // 계단에 닿으면 플레이어처럼 계단 Spot을 통해 층을 이동합니다.
+        // (공격 후 2초 동안은 포탈이 작동하지 않고 벽처럼 처리되어 콜라이더에 막힘)
+        if (!m_HitCooldown && TryUseStairs(collision.collider))
+            return;
+
+        // 벽 등에 막혔으면 그 구간 배회를 마친 것으로 보고 다음 단계로 넘어갑니다.
+        AdvancePatrolPhase();
     }
 
     // 계단 태그면 목적지 층을 계산해 층이동을 시도하고 true를 반환합니다.

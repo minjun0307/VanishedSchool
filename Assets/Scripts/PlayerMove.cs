@@ -45,6 +45,7 @@ public class PlayerMove : MonoBehaviour
     private Floor3 m_floor3;
     private HudUI m_hudUI;
     private PlayerStats m_Stats;   // 스테미나 확인용 (같은 오브젝트의 PlayerStats)
+    private CrumbTrail m_CrumbTrail;   // 몬스터가 따라오는 과자 흔적 (같은 오브젝트의 CrumbTrail)
 
     void Start()
     {
@@ -55,6 +56,7 @@ public class PlayerMove : MonoBehaviour
 
         Boxcollider2d = GetComponent<BoxCollider2D>();
         m_Stats = GetComponent<PlayerStats>();
+        m_CrumbTrail = GetComponent<CrumbTrail>();
         m_Animator = GetComponent<Animator>();
         m_rb = GetComponent<Rigidbody2D>();
         m_rb.interpolation = RigidbodyInterpolation2D.Interpolate; // 물리 프레임과 렌더 프레임의 차이를 보간하여 떨림(Jitter) 방지
@@ -185,6 +187,12 @@ public class PlayerMove : MonoBehaviour
     public void ExitRoom()
     {
         CurrentRoom = Room.None;
+
+        // 방문을 열고 나오는 소리 — 몬스터에게 '몇 층에서 소리가 났는지'만 알려줍니다.
+        // 몬스터는 그 층으로 찾아와 한 바퀴 수색합니다. (Floor.F1 → 1, F2 → 2, F3 → 3)
+        MonsterScene monsterScene = GameMgr.Inst().m_MonsterScene;
+        if (monsterScene != null)
+            monsterScene.NoticeFloor((int)CurrentFloor + 1);
     }
 
     /// <summary>
@@ -336,7 +344,15 @@ public class PlayerMove : MonoBehaviour
         m_IsActive = false;
         vector = Vector2.zero;
         m_Animator.SetBool("Walking", false);
-        m_hudUI.FadeTransition(move, () => m_IsActive = wasActive);
+        m_hudUI.FadeTransition(move, () =>
+        {
+            m_IsActive = wasActive;
+
+            // 방/계단 이동은 좌표가 순간이동하므로, 여기까지 남아 있던 과자 흔적을 끊습니다.
+            // (그대로 두면 몬스터가 벽을 관통하는 직선을 따라가려 합니다)
+            if (m_CrumbTrail != null)
+                m_CrumbTrail.Clear();
+        });
     }
 
     // 계단 콜라이더의 자식 Spot 위치를 안전하게 가져옵니다.
