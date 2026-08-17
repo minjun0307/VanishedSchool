@@ -96,6 +96,14 @@ public class MonsterScene : MonoBehaviour
             m_MonsterMoves.NoticeFloor(floor);
     }
 
+    // 플레이어가 계단을 타고 층을 옮겼을 때 그 계단을 몬스터에게 알립니다. (PlayerMove.OnCollisionEnter2D에서 호출)
+    // 쫓기던 중이었다면 몬스터가 같은 계단으로 따라옵니다.
+    public void NoticeStair(Transform stair)
+    {
+        if (m_MonsterMoves != null)
+            m_MonsterMoves.NoticeStair(stair);
+    }
+
     // 추격이 아닌 상태로 바뀔 때 추격 음악 정지 (사망 시 GameScene에서도 호출)
     public void StopChaseBgm()
     {

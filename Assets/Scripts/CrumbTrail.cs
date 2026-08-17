@@ -28,6 +28,7 @@ public class CrumbTrail : MonoBehaviour
 
     readonly List<Crumb> m_Crumbs = new List<Crumb>();   // index 0 = 가장 오래된 과자
     PlayerMove m_PlayerMove;
+    bool m_WasChasing;   // 지난 프레임에 몬스터가 추격 중이었는지 (추격이 끝나는 순간을 잡기 위함)
 
     void Awake()
     {
@@ -36,6 +37,16 @@ public class CrumbTrail : MonoBehaviour
 
     void Update()
     {
+        // 몬스터가 추격 중일 때만 과자를 흘립니다.
+        // 추격이 끝난 순간(놓침·숨기 등) 남아 있던 과자는 전부 지워, 다음 추격은 항상 새 흔적부터 시작합니다.
+        bool chasing = IsMonsterChasing();
+        if (m_WasChasing && !chasing)
+            Clear();
+        m_WasChasing = chasing;
+
+        if (!chasing)
+            return;
+
         RemoveExpired();
 
         if (!CanDrop())
@@ -66,6 +77,14 @@ public class CrumbTrail : MonoBehaviour
             return false;
 
         return true;
+    }
+
+    // 몬스터가 지금 추격(Chase) 상태인지 확인합니다.
+    // 몬스터가 없는 씬(메뉴 등)에서는 false가 되어 아무것도 기록하지 않습니다.
+    bool IsMonsterChasing()
+    {
+        MonsterScene scene = GameMgr.Inst().m_MonsterScene;
+        return scene != null && scene.m_MonsterMoves != null && scene.m_MonsterMoves.m_Chasing;
     }
 
     // 수명이 다한 과자를 앞에서부터 제거합니다. (앞쪽이 항상 더 오래된 것이라 정렬이 필요 없습니다)

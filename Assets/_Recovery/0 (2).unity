@@ -39924,8 +39924,6 @@ MonoBehaviour:
   m_Floor1StairSpot: {fileID: 0}
   m_Floor2StairSpot: {fileID: 0}
   m_Floor3StairSpot: {fileID: 0}
-  m_FloorChaseTimeLimit: 15
-  m_StairCooldownTime: 0.8
   m_RoomSpots: []
   m_PatrolFailLimit: 3
   m_DamageMin: 35
@@ -44493,7 +44491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2073096723
 SpriteRenderer:
   serializedVersion: 2

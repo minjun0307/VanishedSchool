@@ -195,6 +195,15 @@ public class PlayerMove : MonoBehaviour
             monsterScene.NoticeFloor((int)CurrentFloor + 1);
     }
 
+    // 계단을 타고 층을 옮겼다는 사실을 몬스터에게 알립니다. (방문 소리를 알리는 ExitRoom과 같은 방식)
+    // 쫓기던 중이었다면 몬스터가 바로 이 계단까지 달려와 같은 계단으로 따라 올라옵니다.
+    void NoticeStairToMonster(Collider2D stair)
+    {
+        MonsterScene monsterScene = GameMgr.Inst().m_MonsterScene;
+        if (monsterScene != null)
+            monsterScene.NoticeStair(stair.transform);
+    }
+
     /// <summary>
     /// 외부에서 초기 층을 설정할 때 사용 (예: GameScene.Start)
     /// </summary>
@@ -269,6 +278,8 @@ public class PlayerMove : MonoBehaviour
                     PreviousStairLocation = FindStairSpot(col, "F2SpotUP", PreviousStairLocation);
                 }
 
+                NoticeStairToMonster(col);
+
 
                 /* else if(m_ItsFloor2)*/
                 //floor.F3Pos();
@@ -293,6 +304,8 @@ public class PlayerMove : MonoBehaviour
                     PreviousStairLocation = FindStairSpot(col, "F3SpotD", PreviousStairLocation);
                 }
 
+                NoticeStairToMonster(col);
+
 
                 //GameMgr.Inst().m_GameScene.m_GameUI.m_Floor2.m_Stair2.m_IsActive = true;
             });
@@ -311,6 +324,8 @@ public class PlayerMove : MonoBehaviour
                     f3Pos2();
                     PreviousStairLocation = FindStairSpot(col, "F2SpotUp2", PreviousStairLocation);
                 }
+
+                NoticeStairToMonster(col);
                 //if (CurrentFloor == Floor.F2)
                 //{
                 //    f3Pos2();
@@ -333,6 +348,8 @@ public class PlayerMove : MonoBehaviour
                     f2Pos3();
                     PreviousStairLocation = FindStairSpot(col, "F3SpotD2", PreviousStairLocation);
                 }
+
+                NoticeStairToMonster(col);
             });
         }
     }

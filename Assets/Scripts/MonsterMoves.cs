@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Rendering.Universal;   // Light2D (Spot Light 2D)
@@ -50,6 +51,12 @@ public class MonsterMoves : MonoBehaviour
     public Transform m_Floor2StairSpot;   // 2층 도착 Spot (예: F2Spot)
     public Transform m_Floor3StairSpot;   // 3층 도착 Spot (예: F3Spot)
 
+    [Header("Floor Chase (추격 중 플레이어를 따라 층 이동)")]
+    [Tooltip("추격 중 플레이어가 다른 층으로 도망갔을 때, 이 시간(초) 안에 계단에 닿지 못하면 추격을 포기합니다. 몬스터는 길찾기가 없어 벽에 막히면 계단까지 못 가기 때문입니다. 실제로 재보니 복도 끝에서 계단까지 12~15초가 걸려, 넉넉히 30초로 둡니다.")]
+    public float m_FloorChaseTimeLimit = 30f;
+    [Tooltip("계단으로 층을 옮긴 뒤 이 시간(초) 동안은 계단을 다시 타지 않습니다. 도착 지점 바로 옆 계단에 닿아 곧장 되돌아가는 것을 막습니다.")]
+    public float m_StairCooldownTime = 0.8f;
+
     [Header("Room Teleport (배회를 다 돌아도 감지 실패 시 랜덤 룸 Spot으로 텔레포트)")]
     [Tooltip("룸들의 자식 Spot만 넣어주세요. 계단 Spot은 넣어도 자동으로 제외됩니다.")]
     public RoomSpotInfo[] m_RoomSpots;
@@ -99,7 +106,36 @@ public class MonsterMoves : MonoBehaviour
     private bool m_HitCooldown;         // 공격 후 2초 동안 true (기본 속도, 층이동 금지, 플레이어 통과)
     private Collider2D m_BodyCollider;  // 몬스터 몸통 콜라이더 (플레이어와의 충돌 무시용)
     private PlayerMove m_PlayerMove;    // 플레이어가 현재 몇 층에 있는지 확인용
-    private const float StairArriveThreshold = 0.5f;   // 추격 중 계단 Spot 도착 판정 거리
+    private const float StairArriveThreshold = 0.5f;   // 수색 지점(캐비넷 등) 도착 판정 거리
+    private const float StairTouchMargin = 0.15f;      // 계단에 '닿았다'고 볼 여유 (딱 맞닿은 순간을 놓치지 않기 위함)
+    private const float StairReachDistance = 2f;       // 계단 중심에서 이 거리 안이면 도착으로 봅니다 (몸이 벽에 걸려 콜라이더까지 못 닿는 자리 대비)
+    private const float StairStuckTime = 0.4f;         // 이 시간(초) 이상 제자리면 벽에 막힌 것으로 봅니다
+    private const float StairStuckDist = 0.05f;        // 이 거리보다 조금 움직였으면 제자리로 봅니다
+    private const float StairGiveUpTime = 4f;          // 이 시간(초) 동안 계단에 더 가까워지지 못하면 그 계단을 포기합니다
+    private const float StairSkipTime = 12f;           // 포기한 계단을 다시 후보로 넣기까지 기다리는 시간(초)
+
+    // ── 계단 층이동 ──
+    // 씬에서 찾아둔 계단 한 개의 정보 (플레이어가 쓰는 계단을 몬스터도 그대로 사용합니다)
+    class StairInfo
+    {
+        public Transform m_Tr;      // 계단 콜라이더의 Transform
+        public int m_Floor;         // 이 계단이 있는 층 (1~3)
+        public bool m_Up;           // true = 올라가는 계단, false = 내려가는 계단
+        public Transform m_Exit;    // 이 계단을 탔을 때 도착하는 지점 (플레이어가 나오는 자리와 같음)
+    }
+
+    private List<StairInfo> m_Stairs;    // 씬에서 찾아둔 계단 목록 (처음 필요할 때 한 번만 만듭니다)
+    private Transform m_NoticedStair;    // 플레이어가 방금 타고 사라진 계단 (추격 중에만 기억)
+    private float m_StairReadyTime;      // 이 시각이 지나야 계단을 다시 탈 수 있습니다
+    private float m_FloorChaseElapsed;   // 다른 층에 있는 플레이어를 쫓기 시작한 뒤 흐른 시간
+    private Vector2 m_StairStuckPos;     // 벽에 막혔는지 보기 위해 기억해두는 직전 위치
+    private float m_StairStuckTimer;     // 같은 자리에 머문 시간
+    private bool m_StairDetour;          // true면 막힌 축을 피해 다른 축으로 돌아가는 중
+    private Transform m_StairTarget;     // 지금 향하고 있는 계단 (바뀌면 진행 상황을 새로 잽니다)
+    private float m_StairBestDist;       // 그 계단에 가장 가까이 갔던 거리
+    private float m_StairNoProgress;     // 더 가까워지지 못한 채 흐른 시간
+    private Transform m_SkipStair;       // 끝내 닿지 못해 당분간 건너뛸 계단
+    private float m_SkipStairUntil;      // 이 시각이 지나면 그 계단을 다시 후보에 넣습니다
 
     // ── 수색(캐비넷 등 특정 지점으로 가보기) 상태 ──
     private CrumbTrail m_CrumbTrail;    // 플레이어가 흘리는 과자(발자취) — 추격 중 경로 추종에 사용
@@ -146,6 +182,7 @@ public class MonsterMoves : MonoBehaviour
         m_Chasing = false;
         m_Alert = false;
         m_PlayerMissed = false;   // 다시 배회로 돌아왔으니 '놓침' 표시를 지웁니다
+        m_NoticedStair = null;    // 추격이 끝났으므로 기억해둔 계단도 지웁니다
     }
 
     public void OnChase()
@@ -157,6 +194,12 @@ public class MonsterMoves : MonoBehaviour
         m_PatrolFailCount = 0;   // 플레이어를 감지했으므로 배회 실패 누적 리셋
         m_Searching = false;     // 플레이어를 다시 찾았으니 수색은 필요 없음
         m_NoticedFloor = 0;      // 직접 찾았으므로 문소리 정보는 더 이상 필요 없음
+        m_FloorChaseElapsed = 0f;   // 층 따라가기 제한 시간을 새로 잽니다
+        m_StairDetour = false;      // 계단 우회 상태도 새로 시작합니다
+        m_StairStuckTimer = 0f;
+        m_StairTarget = null;       // 포기했던 계단도 새 추격에서는 다시 후보로
+        m_StairNoProgress = 0f;
+        m_SkipStair = null;
     }
 
     // 경계 상태 진입 — 이유(m_AlertReason)에 따라 행동이 갈립니다.
@@ -304,14 +347,26 @@ public class MonsterMoves : MonoBehaviour
                 int playerFloor = GetPlayerFloor();
                 if (playerFloor != GetCurrentFloor())
                 {
-                    if (!MoveToFloorViaStair(playerFloor))
+                    // 몬스터는 길찾기가 없어서 벽에 막히면 계단까지 영영 가지 못합니다.
+                    // 그래서 다른 층을 쫓는 동안만 시간을 재고, 너무 오래 걸리면 추격을 포기합니다.
+                    m_FloorChaseElapsed += Time.deltaTime;
+                    if (m_FloorChaseElapsed >= m_FloorChaseTimeLimit)
+                    {
+                        movement = Vector2.zero;
+                        Missed();   // 경계 상태로 바뀌고, 잠시 뒤 배회로 돌아갑니다
+                    }
+                    else if (!MoveToFloorViaStair(playerFloor))
+                    {
                         CalculateDirection();
+                    }
                 }
                 // 같은 층: 눈에 직접 보이면 곧장 달려가고, 안 보이면 플레이어가 흘린
                 // 과자(발자취)를 따라 실제로 지나간 경로를 되짚어 갑니다.
-                else if (IsPlayerVisible() || !FollowCrumbs())
+                else
                 {
-                    CalculateDirection();
+                    m_FloorChaseElapsed = 0f;   // 같은 층으로 따라붙었으니 제한 시간을 다시 잽니다
+                    if (IsPlayerVisible() || !FollowCrumbs())
+                        CalculateDirection();
                 }
             }
         }
@@ -469,28 +524,258 @@ public class MonsterMoves : MonoBehaviour
         }
     }
 
-    // 목표 층이 지금 층과 다를 때: 현재 층의 계단 Spot까지 걸어가서, 도착하면 목표 층 방향으로 한 층 이동합니다.
-    // 계단 Spot이 인스펙터에 연결돼 있지 않으면 false를 돌려주어 호출한 쪽이 대체 동작을 하게 합니다.
+    // 목표 층이 지금 층과 다를 때: 실제 계단까지 걸어가서, 도착하면 그 계단으로 한 층 이동합니다.
+    // 갈 수 있는 계단을 찾지 못하면 false를 돌려주어 호출한 쪽이 대체 동작을 하게 합니다.
     bool MoveToFloorViaStair(int targetFloor)
     {
-        int curFloor = GetCurrentFloor();
-        Transform spot = GetStairSpot(curFloor);
-        if (spot == null)
+        StairInfo stair = PickStair(GetCurrentFloor(), targetFloor);
+        if (stair == null)
             return false;
 
-        if (Vector2.Distance(transform.position, spot.position) > StairArriveThreshold)
+        if (!HasReachedStair(stair))
         {
-            MoveToward(spot.position);
+            if (GiveUpStairIfStuck(stair))
+                return true;   // 이 계단은 포기 — 다음 프레임에 다른 계단을 고릅니다
+
+            MoveTowardStair(stair.m_Tr.position);
             return true;
         }
 
-        // 계단에 도착 — 공격 직후 쿨다운 중에는 층이동이 막히므로 제자리에서 대기합니다.
+        // 계단에 도착 — 공격 직후나 방금 층을 옮긴 직후에는 층이동이 막히므로 제자리에서 대기합니다.
         movement = Vector2.zero;
-        if (m_HitCooldown)
+        if (m_HitCooldown || Time.time < m_StairReadyTime)
             return true;
 
-        SetPatrolFloor(targetFloor > curFloor ? curFloor + 1 : curFloor - 1);
+        UseStair(stair);
         return true;
+    }
+
+    // 목표 계단에 좀처럼 가까워지지 못하면 그 계단을 당분간 후보에서 빼고 다른 계단을 찾게 합니다.
+    // 몬스터 몸집(가로 1.1 세로 2.3)이 커서, 플레이어는 지나가도 몬스터는 끝내 닿지 못하는 계단이 실제로 있습니다.
+    // 포기하면 다음 프레임에 PickStair가 다른 계단을 골라줍니다.
+    bool GiveUpStairIfStuck(StairInfo stair)
+    {
+        float dist = Vector2.Distance(transform.position, stair.m_Tr.position);
+
+        if (stair.m_Tr != m_StairTarget)
+        {
+            m_StairTarget = stair.m_Tr;   // 목표가 바뀌었으니 처음부터 다시 잽니다
+            m_StairBestDist = dist;
+            m_StairNoProgress = 0f;
+            return false;
+        }
+
+        if (dist < m_StairBestDist - StairStuckDist)
+        {
+            m_StairBestDist = dist;   // 더 가까워졌다 = 잘 가고 있는 중
+            m_StairNoProgress = 0f;
+            return false;
+        }
+
+        m_StairNoProgress += Time.deltaTime;
+        if (m_StairNoProgress < StairGiveUpTime)
+            return false;
+
+        m_SkipStair = stair.m_Tr;
+        m_SkipStairUntil = Time.time + StairSkipTime;
+        m_StairTarget = null;
+        m_StairNoProgress = 0f;
+        m_StairDetour = false;
+        movement = Vector2.zero;
+        return true;
+    }
+
+    // 계단으로 갈 때 쓰는 이동입니다.
+    // 이 몬스터는 길찾기가 없어서, 가로/세로 중 한 축을 골라 이동하다 벽을 만나면 그 축을 계속 밀기만 합니다.
+    // 그래서 잠깐 제자리에 머무르면 막힌 것으로 보고 축을 바꿔 돌아가게 합니다.
+    // (복도를 낀 학교 구조에서는 이 정도만으로 대부분 계단까지 갈 수 있습니다.
+    //  그래도 끝내 못 가면 m_FloorChaseTimeLimit이 지나 추격을 포기합니다)
+    void MoveTowardStair(Vector2 target)
+    {
+        Vector2 pos = transform.position;
+
+        if (Vector2.Distance(pos, m_StairStuckPos) < StairStuckDist)
+        {
+            m_StairStuckTimer += Time.deltaTime;
+            if (m_StairStuckTimer >= StairStuckTime)
+            {
+                m_StairDetour = !m_StairDetour;   // 막혔으니 반대 축으로 돌아갑니다
+                m_StairStuckTimer = 0f;
+            }
+        }
+        else
+        {
+            m_StairStuckTimer = 0f;
+            m_StairStuckPos = pos;
+        }
+
+        Vector2 dir = target - pos;
+        bool useX = Mathf.Abs(dir.x) > Mathf.Abs(dir.y);
+        if (m_StairDetour)
+            useX = !useX;
+
+        // 고른 축이 이미 목표에 거의 맞아 있으면 남은 축으로 움직입니다.
+        if (useX && Mathf.Abs(dir.x) < ArriveThreshold)
+            useX = false;
+        else if (!useX && Mathf.Abs(dir.y) < ArriveThreshold)
+            useX = true;
+
+        movement = useX ? new Vector2(Mathf.Sign(dir.x), 0f) : new Vector2(0f, Mathf.Sign(dir.y));
+    }
+
+    // 계단에 도착했는지 확인합니다.
+    // 계단은 벽처럼 막는 콜라이더라 몬스터 몸통(가로 약 1.1, 세로 약 2.3)이 먼저 부딪혀
+    // 계단 중심까지는 1.0~1.6 정도가 남습니다. 그래서 '중심까지의 거리'로 재면 영영 도착하지 못합니다.
+    // 대신 플레이어가 계단을 밟는 것과 같게 '몸이 계단에 닿았는지'로 판정합니다.
+    bool HasReachedStair(StairInfo stair)
+    {
+        // 계단 코앞까지 왔으면 도착으로 봅니다.
+        // 옆 벽에 몸이 걸려 콜라이더에 끝내 닿지 못하는 자리가 실제로 있어서, 거리로도 한 번 봐줍니다.
+        if (Vector2.Distance(transform.position, stair.m_Tr.position) <= StairReachDistance)
+            return true;
+
+        Collider2D stairCol = stair.m_Tr.GetComponent<Collider2D>();
+        if (stairCol == null || m_BodyCollider == null)
+            return false;
+
+        // 큰 계단이라면 중심은 멀어도 몸이 이미 닿아 있을 수 있으므로, 맞닿음도 함께 봅니다.
+        Bounds body = m_BodyCollider.bounds;
+        body.Expand(StairTouchMargin);
+        return body.Intersects(stairCol.bounds);
+    }
+
+    // 지금 층에서 목표 층 쪽으로 갈 수 있는 계단을 고릅니다.
+    // 플레이어가 방금 타고 사라진 계단이 조건에 맞으면 그것을 먼저 쓰고(발자취를 쫓듯),
+    // 그런 계단이 없으면 몬스터에게 가장 가까운 계단을 씁니다.
+    StairInfo PickStair(int curFloor, int targetFloor)
+    {
+        List<StairInfo> stairs = GetStairs();
+        if (stairs == null)
+            return null;
+
+        bool up = targetFloor > curFloor;
+        StairInfo nearest = null;
+        float nearestDist = float.MaxValue;
+
+        foreach (StairInfo stair in stairs)
+        {
+            if (stair.m_Floor != curFloor || stair.m_Up != up)
+                continue;   // 다른 층 계단이거나 반대 방향 계단
+
+            if (stair.m_Tr == m_SkipStair && Time.time < m_SkipStairUntil)
+                continue;   // 아까 끝내 닿지 못한 계단은 당분간 건너뜁니다
+
+            if (stair.m_Tr == m_NoticedStair)
+                return stair;   // 플레이어가 탄 바로 그 계단 — 더 볼 것 없이 이걸로
+
+            // 제곱근 없이 거리제곱끼리 비교합니다.
+            float dist = Vector2.SqrMagnitude((Vector2)stair.m_Tr.position - (Vector2)transform.position);
+            if (dist >= nearestDist)
+                continue;
+
+            nearestDist = dist;
+            nearest = stair;
+        }
+
+        return nearest;
+    }
+
+    // 계단을 타고 한 층 이동합니다. 플레이어가 그 계단으로 나오는 자리와 똑같은 곳에 나타납니다.
+    void UseStair(StairInfo stair)
+    {
+        SetFloorFlags(stair.m_Up ? stair.m_Floor + 1 : stair.m_Floor - 1);
+        rb.position = stair.m_Exit.position;
+
+        m_StairReadyTime = Time.time + m_StairCooldownTime;   // 도착 지점 옆 계단에 곧바로 다시 닿는 것을 막습니다
+        m_NoticedStair = null;   // 이 계단은 다 썼습니다
+        m_movingToMax = false;   // 새 층에서는 다시 최소 x부터 배회
+        m_StairDetour = false;   // 새 층에서는 우회 없이 다시 판단합니다
+        m_StairStuckTimer = 0f;
+        m_StairTarget = null;    // 새 층에서 계단 진행 상황을 새로 잽니다
+        m_StairNoProgress = 0f;
+    }
+
+    // 플레이어가 계단을 타고 층을 옮겼을 때 그 계단을 알려받습니다. (PlayerMove에서 호출)
+    // 쫓기던 중이었다면 몬스터가 바로 그 계단으로 따라갑니다.
+    public void NoticeStair(Transform stair)
+    {
+        if (!m_IsActive || !m_Chasing)
+            return;   // 활동 전이거나 쫓고 있지 않았다면 플레이어가 어디로 갔는지 알 수 없습니다
+
+        m_NoticedStair = stair;
+    }
+
+    // 씬에 있는 계단을 모두 찾아 표로 만들어 둡니다. (처음 필요할 때 한 번만 만들고 이후 재사용)
+    // 각 층 맵 오브젝트(Floor1/Floor2/Floor3) 아래를 훑으므로 어느 층 계단인지가 계층만으로 정확히 갈립니다.
+    // GameObject.FindGameObjectsWithTag는 꺼져 있는 오브젝트를 찾지 못해 사용하지 않습니다.
+    List<StairInfo> GetStairs()
+    {
+        if (m_Stairs != null)
+            return m_Stairs;
+
+        GameScene gameScene = GameMgr.Inst().m_GameScene;
+        GameUI ui = gameScene != null ? gameScene.m_GameUI : null;
+        if (ui == null || ui.m_Floor1 == null || ui.m_Floor2 == null || ui.m_Floor3 == null)
+            return null;   // 아직 준비되기 전이면 다음 프레임에 다시 시도합니다
+
+        Transform[] floorRoots = { ui.m_Floor1.transform, ui.m_Floor2.transform, ui.m_Floor3.transform };
+
+        m_Stairs = new List<StairInfo>();
+        for (int i = 0; i < floorRoots.Length; i++)
+        {
+            // 꺼져 있는 자식까지 포함해서 훑습니다. (층 맵이 SetActive(false)인 순간이 있습니다)
+            Transform[] all = floorRoots[i].GetComponentsInChildren<Transform>(true);
+            foreach (Transform tr in all)
+                TryAddStair(tr, i + 1, floorRoots);
+        }
+
+        if (m_Stairs.Count == 0)
+            Debug.LogWarning("몬스터가 쓸 계단을 하나도 찾지 못했습니다. 추격 중 층 따라가기가 동작하지 않습니다.", this);
+
+        return m_Stairs;
+    }
+
+    // 이 오브젝트가 계단이면 방향과 도착 지점을 알아내 표에 넣습니다.
+    // 도착 지점을 찾지 못한 계단은 넣지 않습니다. (엉뚱한 곳으로 순간이동하는 사고를 막기 위함)
+    void TryAddStair(Transform tr, int floor, Transform[] floorRoots)
+    {
+        bool up;
+        if (tr.CompareTag("Stairs") || tr.CompareTag("OtherStair"))
+            up = true;
+        else if (tr.CompareTag("Stairs2") || tr.CompareTag("OtherStair2"))
+            up = false;
+        else
+            return;   // 계단이 아님
+
+        int targetFloor = up ? floor + 1 : floor - 1;
+        if (targetFloor < 1 || targetFloor > 3)
+            return;   // 1층 아래나 3층 위로는 갈 곳이 없습니다
+
+        string exitName = GetExitSpotName(tr, floor);
+        Transform exit = exitName != null ? floorRoots[targetFloor - 1].Find(exitName) : null;
+        if (exit == null)
+        {
+            Debug.LogWarning("계단 '" + tr.name + "'의 도착 지점 '" + exitName + "'을(를) 찾지 못해 몬스터가 이 계단을 쓸 수 없습니다.", tr);
+            return;
+        }
+
+        m_Stairs.Add(new StairInfo { m_Tr = tr, m_Floor = floor, m_Up = up, m_Exit = exit });
+    }
+
+    // 계단의 태그와 층에 따라, 그 계단을 탔을 때 도착하는 지점의 이름을 돌려줍니다.
+    // PlayerMove.OnCollisionEnter2D의 계단 처리와 똑같은 표라서 몬스터가 플레이어와 같은 자리로 나옵니다.
+    string GetExitSpotName(Transform stair, int floor)
+    {
+        if (stair.CompareTag("Stairs"))          // 좌측 올라가는 계단
+            return floor == 1 ? "F2Spot" : floor == 2 ? "F3Spot" : null;
+        if (stair.CompareTag("OtherStair"))      // 우측 올라가는 계단
+            return floor == 1 ? "F2Spot2" : floor == 2 ? "F3Spot2" : null;
+        if (stair.CompareTag("Stairs2"))         // 좌측 내려가는 계단
+            return floor == 2 ? "F1SpotD" : floor == 3 ? "F2Spot" : null;
+        if (stair.CompareTag("OtherStair2"))     // 우측 내려가는 계단
+            return floor == 2 ? "F1SpotD2" : floor == 3 ? "F2Spot3" : null;
+
+        return null;
     }
 
     // 외부(캐비넷 등)에서 "이 지점을 확인해 봐라"라고 지시할 때 호출합니다.
@@ -584,9 +869,62 @@ public class MonsterMoves : MonoBehaviour
     }
 
     // 해당 층의 계단 도착 Spot
+    // 인스펙터에 직접 지정한 것이 있으면 그것을 쓰고, 비어 있으면 계단 표에서 찾아 씁니다.
     Transform GetStairSpot(int floor)
     {
-        return floor == 1 ? m_Floor1StairSpot : floor == 2 ? m_Floor2StairSpot : m_Floor3StairSpot;
+        Transform spot = floor == 1 ? m_Floor1StairSpot : floor == 2 ? m_Floor2StairSpot : m_Floor3StairSpot;
+        if (spot != null)
+            return spot;
+
+        return GetFloorArrivalSpot(floor);
+    }
+
+    // 그 층으로 올라오거나 내려오는 계단의 도착 지점을 계단 표에서 찾습니다.
+    // (플레이어가 그 층으로 이동했을 때 나타나는 자리와 같은 곳이라 확실히 통로 위입니다)
+    // 후보가 여러 개면 몬스터 몸이 계단에 걸치지 않는 자리를 먼저 씁니다.
+    Transform GetFloorArrivalSpot(int floor)
+    {
+        List<StairInfo> stairs = GetStairs();
+        if (stairs == null)
+            return null;
+
+        Transform fallback = null;   // 걸치지 않는 자리가 하나도 없을 때 쓸 예비
+
+        foreach (StairInfo stair in stairs)
+        {
+            int arriveFloor = stair.m_Up ? stair.m_Floor + 1 : stair.m_Floor - 1;
+            if (arriveFloor != floor)
+                continue;
+
+            if (fallback == null)
+                fallback = stair.m_Exit;
+
+            if (!IsSpotBlockedByStair(stair.m_Exit, floor, stairs))
+                return stair.m_Exit;
+        }
+
+        return fallback;
+    }
+
+    // 그 자리에 섰을 때 몬스터 몸통이 같은 층 계단에 걸치는지 확인합니다.
+    // 걸치는 자리에 내리면 계단 콜라이더에 밀리거나 곧바로 다시 층을 옮기게 됩니다.
+    bool IsSpotBlockedByStair(Transform spot, int floor, List<StairInfo> stairs)
+    {
+        if (spot == null || m_BodyCollider == null)
+            return false;
+
+        Bounds body = new Bounds(spot.position, m_BodyCollider.bounds.size);
+        foreach (StairInfo stair in stairs)
+        {
+            if (stair.m_Floor != floor)
+                continue;
+
+            Collider2D col = stair.m_Tr.GetComponent<Collider2D>();
+            if (col != null && body.Intersects(col.bounds))
+                return true;
+        }
+
+        return false;
     }
 
     // 배회 상태: 현재 위치에서 최소 x까지 걸어간 뒤, 최대 x까지 왕복합니다.
@@ -728,10 +1066,13 @@ public class MonsterMoves : MonoBehaviour
         }
         else
         {
-            // Spot이 지정되지 않았으면 기존 방식대로 y 좌표만 변경 (x는 유지)
+            // 쓸 수 있는 Spot을 끝내 찾지 못했으면 기존 방식대로 y 좌표만 변경 (x는 유지)
             float y = floor == 1 ? floor1Y : floor == 2 ? floor2Y : floor3Y;
             rb.position = new Vector2(rb.position.x, y);
         }
+
+        // 도착 지점 바로 옆에 계단이 있는 층이 있어서, 내리자마자 그 계단에 닿아 되돌아가는 것을 막습니다.
+        m_StairReadyTime = Time.time + m_StairCooldownTime;
     }
 
     void SetFloorFlags(int floor)
@@ -835,8 +1176,8 @@ public class MonsterMoves : MonoBehaviour
             return;
 
         // 계단에 닿으면 플레이어처럼 계단 Spot을 통해 층을 이동합니다.
-        // (공격 후 2초 동안은 포탈이 작동하지 않고 벽처럼 처리되어 콜라이더에 막힘)
-        if (!m_HitCooldown && TryUseStairs(collision.collider))
+        // (공격 후 2초 동안과 방금 층을 옮긴 직후에는 포탈이 작동하지 않고 벽처럼 처리되어 콜라이더에 막힘)
+        if (!m_HitCooldown && Time.time >= m_StairReadyTime && TryUseStairs(collision.collider))
             return;
 
         // 벽 등에 막혔으면 그 구간 배회를 마친 것으로 보고 다음 단계로 넘어갑니다.
