@@ -31,6 +31,9 @@ public class PlayerStats : MonoBehaviour
     float m_strAccum; // STR을 정수로 유지하기 위한 1 미만 감소분 누적 버퍼
     PlayerMove m_Move; // 달리기 중인지 확인용 (같은 오브젝트의 PlayerMove)
 
+    // 캐비넷에 숨어 있는 동안 true — 그 사이에는 어떤 피해도 받지 않습니다. (Cabinet이 켜고 끕니다)
+    [HideInInspector] public bool m_Invincible;
+
     public int Hp { get { return m_Hp; } }
     public int Str { get { return m_Str; } }
 
@@ -87,6 +90,9 @@ public class PlayerStats : MonoBehaviour
     // 몬스터가 플레이어를 공격했을 때 호출 (데미지는 정수)
     public void TakeDamage(int damage)
     {
+        if (m_Invincible)
+            return;   // 캐비넷에 숨어 있는 동안은 무적
+
         if (m_Hp <= 0)
             return;   // 이미 사망 상태면 중복 처리 방지
 

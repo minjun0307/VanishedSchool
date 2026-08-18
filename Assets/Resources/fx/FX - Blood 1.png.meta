@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 75ffd33a5f641cc4e8f451b6107de21f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8191688199578976726
+    second: FX - Blood 1_0
+  - first:
+      213: -1928351727038051118
+    second: FX - Blood 1_1
+  - first:
+      213: -4996850998761024931
+    second: FX - Blood 1_2
+  - first:
+      213: 8038144183739101695
+    second: FX - Blood 1_3
+  - first:
+      213: -5531221946441273445
+    second: FX - Blood 1_4
+  - first:
+      213: -3648353992382261297
+    second: FX - Blood 1_5
+  - first:
+      213: 7030789703627504468
+    second: FX - Blood 1_6
+  - first:
+      213: 1901870076194371843
+    second: FX - Blood 1_7
+  - first:
+      213: -4262035250783473011
+    second: FX - Blood 1_8
+  - first:
+      213: -4518022689800097812
+    second: FX - Blood 1_9
+  - first:
+      213: 1862456484789831810
+    second: FX - Blood 1_10
+  - first:
+      213: 5987352374994909688
+    second: FX - Blood 1_11
+  - first:
+      213: -5528089474517555082
+    second: FX - Blood 1_12
+  - first:
+      213: -2222531219536470913
+    second: FX - Blood 1_13
+  - first:
+      213: -9022590653978011997
+    second: FX - Blood 1_14
+  - first:
+      213: -7676984598683825238
+    second: FX - Blood 1_15
+  - first:
+      213: -2427778432137869313
+    second: FX - Blood 1_16
+  - first:
+      213: 1148271832633145400
+    second: FX - Blood 1_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FX - Blood 1_0
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 204
+        width: 354
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2ef551ebf6415e80800000000000000
+      internalID: -8191688199578976726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_1
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 514
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dcc2e3325e1d35e0800000000000000
+      internalID: -1928351727038051118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_2
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 468
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d521b47bd7e97aab0800000000000000
+      internalID: -4996850998761024931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_3
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 497
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff134251c893d8f60800000000000000
+      internalID: 8038144183739101695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_4
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 485
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9fe58402f62d33b0800000000000000
+      internalID: -5531221946441273445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_5
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 486
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc75d2daf517e5dc0800000000000000
+      internalID: -3648353992382261297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_6
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 473
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45bf0371cf1629160800000000000000
+      internalID: 7030789703627504468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_7
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 432
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 309b28cf1ccc46a10800000000000000
+      internalID: 1901870076194371843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_8
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 317
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d82bbd845853ad4c0800000000000000
+      internalID: -4262035250783473011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_9
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 294
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef6f471d42cc41c0800000000000000
+      internalID: -4518022689800097812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_10
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 266
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28845812e46c8d910800000000000000
+      internalID: 1862456484789831810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_11
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 253
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f9b9a04349571350800000000000000
+      internalID: 5987352374994909688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_12
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 272
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6782ec879e74843b0800000000000000
+      internalID: -5528089474517555082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_13
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 231
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7c105d91abf721e0800000000000000
+      internalID: -2222531219536470913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_14
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 243
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a691eb9a9159c280800000000000000
+      internalID: -9022590653978011997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_15
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 236
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab4e419e2fd57590800000000000000
+      internalID: -7676984598683825238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_16
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 209
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff7411ff06cce4ed0800000000000000
+      internalID: -2427778432137869313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FX - Blood 1_17
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 211
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8387fa1e52b7fef00800000000000000
+      internalID: 1148271832633145400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1c68f539cff1c964fb6f1a5be188b15d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FX - Blood 1_0: -8191688199578976726
+      FX - Blood 1_1: -1928351727038051118
+      FX - Blood 1_10: 1862456484789831810
+      FX - Blood 1_11: 5987352374994909688
+      FX - Blood 1_12: -5528089474517555082
+      FX - Blood 1_13: -2222531219536470913
+      FX - Blood 1_14: -9022590653978011997
+      FX - Blood 1_15: -7676984598683825238
+      FX - Blood 1_16: -2427778432137869313
+      FX - Blood 1_17: 1148271832633145400
+      FX - Blood 1_2: -4996850998761024931
+      FX - Blood 1_3: 8038144183739101695
+      FX - Blood 1_4: -5531221946441273445
+      FX - Blood 1_5: -3648353992382261297
+      FX - Blood 1_6: 7030789703627504468
+      FX - Blood 1_7: 1901870076194371843
+      FX - Blood 1_8: -4262035250783473011
+      FX - Blood 1_9: -4518022689800097812
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

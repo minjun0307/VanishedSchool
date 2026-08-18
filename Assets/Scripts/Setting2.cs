@@ -19,10 +19,18 @@ public class Setting2 : MonoBehaviour
         m_btnSave.onClick.AddListener(onclickbtnSave);
         m_btnLoad.onClick.AddListener(onclickbtnload);
         m_btnInventory.onClick.AddListener(onclickbtnInven);
+
     }
     public void Activate()
     {
         gameObject.SetActive(true);
+    }
+
+    // 열려 있는 패널을 모두 닫고 메뉴 자체를 끕니다. (Escape 키, 캐비넷에 숨을 때 사용)
+    public void Deactivate()
+    {
+        TurnOFF();
+        gameObject.SetActive(false);
     }
     void onclickbtnInven()
     {
@@ -97,8 +105,7 @@ public class Setting2 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TurnOFF();
-            gameObject.SetActive(false);
+            Deactivate();
             m_monsterMoves.m_IsActive = true;
         }
 

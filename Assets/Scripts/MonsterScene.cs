@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class MonsterScene : MonoBehaviour
@@ -9,6 +10,12 @@ public class MonsterScene : MonoBehaviour
     [Header("Chase BGM (추격 상태 음악)")]
     public AudioSource m_ChaseBgm;   // 추격 음악 AudioSource (에디터에서 연결, Loop 체크 권장)
 
+    [Header("Alert (경계 상태)")]
+    [Tooltip("플레이어를 놓친 뒤 제자리에서 경계하는 시간(초). 이 시간이 지나면 배회로 돌아갑니다")]
+    public float m_AlertTime = 3f;
+
+    Coroutine m_AlertRoutine;   // 경계 → 배회 복귀 타이머 (중복 실행 방지용으로 들고 있습니다)
+
     void Awake()
     {
         GameMgr.Inst().m_MonsterScene = this;
@@ -18,6 +25,7 @@ public class MonsterScene : MonoBehaviour
     {
         m_MonsterFSM.Initialize(Callback_ReadyState, Callback_AlertState, Callback_ChasingState, Callback_PatrolState);
         m_MonsterFSM.SetReadyState();
+
     }
     void Callback_ReadyState()
     { //게임 시작하면 ready상태로 시작하고 2층에서 몬스터 배회    주변에서 달리기사용시 발소리듣고 경계
@@ -28,6 +36,7 @@ public class MonsterScene : MonoBehaviour
     }
     void Callback_PatrolState()
     {
+        StopAlertRoutine();   // 배회로 돌아왔으니 경계 타이머는 더 필요 없음
         if (m_MonsterMoves != null)
             m_MonsterMoves.OnPatrol();
         StopChaseBgm();   // 추격에서 배회로 돌아오면 추격 음악 끄기
@@ -35,15 +44,64 @@ public class MonsterScene : MonoBehaviour
     void Callback_AlertState() //경계하다 발견 -> 추격 > 아이템 아니면 무조건 추격성공
     {
         StopChaseBgm();   // 추격에서 경계로 바뀌면 추격 음악 끄기
+
+        if (m_MonsterMoves == null)
+            return;
+
+        m_MonsterMoves.OnAlert();
+        StopAlertRoutine();
+
+        // 문소리를 듣고 온 경계라면 그 층을 한 바퀴 훑을 때까지 유지되므로
+        // 시간제 복귀 타이머를 걸지 않습니다. (수색이 끝나면 몬스터가 스스로 배회로 돌아감)
+        if (m_MonsterMoves.AlertReasonNow == AlertReason.RoomNoise)
+            return;
+
+        // 소화기 연막에 들어가 플레이어를 놓쳤을 때 이 상태로 들어옵니다.
+        // 추격을 풀고 제자리에 멈춘 뒤, m_AlertTime초가 지나면 배회로 돌아갑니다.
+        m_AlertRoutine = StartCoroutine(AlertRoutine());
     }
     void Callback_ChasingState()
     {
+        StopAlertRoutine();   // 경계 도중 다시 발견했다면 복귀 타이머 취소
         if (m_MonsterMoves != null)
             m_MonsterMoves.OnChase();
 
         // 추격 상태 진입: 추격 음악 재생 (이미 재생 중이면 그대로 둠)
         if (m_ChaseBgm != null && !m_ChaseBgm.isPlaying)
             m_ChaseBgm.Play();
+    }
+
+    // 경계 시간이 지나면 배회 상태로 되돌립니다.
+    IEnumerator AlertRoutine()
+    {
+        yield return new WaitForSeconds(m_AlertTime);
+
+        m_AlertRoutine = null;   // 다 끝난 코루틴을 나중에 StopCoroutine하지 않도록 먼저 비움
+        m_MonsterFSM.SetPatrolState();
+    }
+
+    void StopAlertRoutine()
+    {
+        if (m_AlertRoutine != null)
+        {
+            StopCoroutine(m_AlertRoutine);
+            m_AlertRoutine = null;
+        }
+    }
+
+    // 플레이어가 방에서 나왔을 때 그 층(1~3)을 몬스터에게 알립니다. (PlayerMove.ExitRoom에서 호출)
+    public void NoticeFloor(int floor)
+    {
+        if (m_MonsterMoves != null)
+            m_MonsterMoves.NoticeFloor(floor);
+    }
+
+    // 플레이어가 계단을 타고 층을 옮겼을 때 그 계단을 몬스터에게 알립니다. (PlayerMove.OnCollisionEnter2D에서 호출)
+    // 쫓기던 중이었다면 몬스터가 같은 계단으로 따라옵니다.
+    public void NoticeStair(Transform stair)
+    {
+        if (m_MonsterMoves != null)
+            m_MonsterMoves.NoticeStair(stair);
     }
 
     // 추격이 아닌 상태로 바뀔 때 추격 음악 정지 (사망 시 GameScene에서도 호출)
