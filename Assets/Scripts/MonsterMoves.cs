@@ -90,6 +90,7 @@ public class MonsterMoves : MonoBehaviour
     private Animator m_Animator;
     private float m_visionLocalY;   // 시야(스포트라이트/콜라이더)의 초기 로컬 y — 항상 이 높이로 고정
     private bool m_movingToMax;     // 배회 단계: false = 최소 x로 이동 중, true = 최대 x로 이동 중
+    private bool m_PatrolReturned;  // 한 바퀴(최소→최대)를 다 돌고도 못 찾아서 반대편으로 되돌아가는 중
     private const float ArriveThreshold = 0.1f;   // 목표 x 도착 판정 거리
 
     public Transform m_spotLight;
@@ -153,6 +154,7 @@ public class MonsterMoves : MonoBehaviour
     private bool m_LeaveAfterSearch;    // 수색을 마친 뒤 다른 층으로 떠날지
     private float m_SearchLingerTimer;  // 도착 후 머문 시간
     private float m_SearchElapsed;      // 수색을 시작한 뒤 흐른 시간 (제한 시간 확인용)
+    private bool m_SearchGoOpposite;    // 수색 지점에서 못 찾아 그 층 반대편 끝으로 가보는 중
 
     void Awake()
     {
@@ -317,7 +319,7 @@ public class MonsterMoves : MonoBehaviour
     {
         m_SweepPhase = 0;
         m_SweepElapsed = 0f;
-        m_movingToMax = false;   // 새 위치에서 다시 최소 x부터 배회
+        ResetPatrolPhase();   // 새 위치에서 다시 최소 x부터 배회
         m_monsterFSM.SetPatrolState();
     }
 
@@ -412,6 +414,13 @@ public class MonsterMoves : MonoBehaviour
     // 감지(배회 중 추격 시작)와 추격 중 '직선으로 달려갈지' 판단에 함께 사용합니다.
     public bool IsPlayerVisible()
     {
+        // 플레이어가 캐비넷에 숨어 있으면 어떤 경우에도 보이지 않습니다 = '못 찾음'.
+        // 숨는 동안 플레이어 콜라이더가 꺼져 raycast에도 안 잡히지만,
+        // 그건 부수 효과일 뿐이라 판정 근거를 여기에 명시해 둡니다.
+        // (검사 비용이 가장 싼 조건이라 맨 앞에 두어 아래 계산도 함께 아낍니다)
+        if (Cabinet.Hiding != null)
+            return false;
+
         // spotlight(Spot Light 2D)가 실제로 비추는 범위 = 몬스터의 시야로 사용하는 감지 시스템
         // 거리/각도 검사는 순수 계산이라 가볍고, 그 안에 들어왔을 때만 raycast를 수행합니다.
         if (player == null || m_SpotLight2D == null || m_spotLight == null)
@@ -688,7 +697,7 @@ public class MonsterMoves : MonoBehaviour
 
         m_StairReadyTime = Time.time + m_StairCooldownTime;   // 도착 지점 옆 계단에 곧바로 다시 닿는 것을 막습니다
         m_NoticedStair = null;   // 이 계단은 다 썼습니다
-        m_movingToMax = false;   // 새 층에서는 다시 최소 x부터 배회
+        ResetPatrolPhase();      // 새 층에서는 다시 최소 x부터 배회
         m_StairDetour = false;   // 새 층에서는 우회 없이 다시 판단합니다
         m_StairStuckTimer = 0f;
         m_StairTarget = null;    // 새 층에서 계단 진행 상황을 새로 잽니다
@@ -787,6 +796,7 @@ public class MonsterMoves : MonoBehaviour
         m_SearchPos = pos;
         m_SearchFloor = Mathf.Clamp(floor, 1, 3);
         m_LeaveAfterSearch = leaveAfter;
+        m_SearchGoOpposite = false;
         m_SearchLingerTimer = 0f;
         m_SearchElapsed = 0f;
     }
@@ -822,19 +832,46 @@ public class MonsterMoves : MonoBehaviour
         if (m_SearchLingerTimer < m_SearchLingerTime)
             return;
 
+        // 수색 지점까지 와서 머물렀는데도 플레이어를 못 찾음.
+        // (캐비넷에 숨어 있으면 IsPlayerVisible이 false라 반드시 이쪽으로 옵니다)
+        // 층을 떠나기 전에 이 층 반대편 끝까지 딱 한 번 가봅니다.
+        if (!m_SearchGoOpposite)
+        {
+            BeginOppositeSearch();
+            return;
+        }
+
+        // 반대편에서도 못 찾음 → 이제 층을 옮깁니다.
         if (m_LeaveAfterSearch)
             SetPatrolFloor(PickLeaveFloor(GetCurrentFloor()));
 
         EndSearch();
     }
 
+    // 수색 지점에서 못 찾았을 때: 같은 층에서 지금 자리보다 먼 쪽 끝을 새 수색 지점으로 삼습니다.
+    // 배회와 똑같이 x로만 움직이도록 y는 현재 높이를 그대로 씁니다.
+    void BeginOppositeSearch()
+    {
+        float minX, maxX;
+        GetPatrolRange(out minX, out maxX);
+
+        float x = transform.position.x;
+        float targetX = (x - minX) > (maxX - x) ? minX : maxX;   // 더 먼 쪽 끝 = 반대편
+
+        m_SearchGoOpposite = true;
+        m_SearchPos = new Vector2(targetX, transform.position.y);
+        m_SearchLingerTimer = 0f;
+        m_SearchElapsed = 0f;   // 반대편까지 걸어갈 시간을 새로 잽니다
+    }
+
     // 수색을 끝내고 평소 배회로 돌아갑니다.
     void EndSearch()
     {
         m_Searching = false;
+        m_SearchGoOpposite = false;
         m_SearchLingerTimer = 0f;
         m_SearchElapsed = 0f;
-        m_movingToMax = false;   // 새 위치에서 다시 최소 x부터 배회
+        ResetPatrolPhase();   // 새 위치에서 다시 최소 x부터 배회
     }
 
     // 수색을 마친 뒤 떠날 층: 1층은 2층, 3층은 2층으로 고정, 2층은 1층/3층 중 랜덤.
@@ -959,19 +996,34 @@ public class MonsterMoves : MonoBehaviour
         movement = new Vector2(Mathf.Sign(diff), 0f);
     }
 
-    // 배회 한 구간이 끝났을 때: 최소 x 도착 → 최대 x로 방향 전환,
-    // 최대 x까지 다 돌았는데 플레이어 감지 실패 → 다음 층으로 이동합니다.
+    // 배회 한 구간이 끝났을 때 (= 그 방향으로는 플레이어를 못 찾았을 때) 어디로 갈지 정합니다.
+    //   최소 x 도착        → 최대 x 로  (한 바퀴 진행)
+    //   최대 x 도착        → 못 찾았으므로 층을 떠나기 전에 반대편(최소 x)으로 딱 한 번 더
+    //   반대편까지 갔는데도 못 찾음 → 그때 다음 층으로 이동
     void AdvancePatrolPhase()
     {
-        if (m_movingToMax)
+        // 아직 반대편으로 되돌아가 보지 않았다면 층을 떠나지 않고 방향만 바꿉니다.
+        if (!m_PatrolReturned)
         {
-            MoveToNextFloor();
-            m_movingToMax = false;   // 새 층에서는 다시 최소 x부터
+            // 최소 x → 최대 x 로 바꾸는 것은 원래 한 바퀴에 포함되므로,
+            // '반대편으로 한 번 더'는 최대 x 까지 다 훑은 뒤부터 셉니다.
+            if (m_movingToMax)
+                m_PatrolReturned = true;
+
+            m_movingToMax = !m_movingToMax;
+            return;
         }
-        else
-        {
-            m_movingToMax = true;
-        }
+
+        // 반대편까지 되돌아왔는데도 못 찾음 → 이 층에는 없다고 보고 다음 층으로
+        MoveToNextFloor();
+        ResetPatrolPhase();
+    }
+
+    // 배회 단계를 처음 상태로 되돌립니다. (새 층·새 위치에서는 다시 최소 x 부터 왕복)
+    void ResetPatrolPhase()
+    {
+        m_movingToMax = false;
+        m_PatrolReturned = false;
     }
 
     // 현재 층 불리언에 맞는 배회 반경을 돌려줍니다.
@@ -1013,7 +1065,7 @@ public class MonsterMoves : MonoBehaviour
             return;
 
         SetPatrolFloor(targetFloor);
-        m_movingToMax = false;   // 새 층에서는 다시 최소 x부터
+        ResetPatrolPhase();   // 새 층에서는 다시 최소 x부터
     }
 
     // 배회 실패가 누적되면 랜덤 룸의 자식 Spot으로 텔레포트합니다. (계단 Spot은 후보에서 제외)
@@ -1042,7 +1094,7 @@ public class MonsterMoves : MonoBehaviour
 
             SetFloorFlags(info.m_Floor);
             rb.position = info.m_Spot.position;
-            m_movingToMax = false;   // 새 위치에서는 다시 최소 x부터 배회
+            ResetPatrolPhase();   // 새 위치에서는 다시 최소 x부터 배회
             m_PatrolFailCount = 0;
             return true;
         }

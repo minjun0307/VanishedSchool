@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   m_Id: Evidence
   m_Name: 
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -9000767040744291940, guid: 18a131896d2b08c40a18a9b0d7352d56, type: 3}
   m_Type: 0
   m_Effect: 0
   m_Desc: 

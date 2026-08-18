@@ -31,6 +31,10 @@ public class HudUI : MonoBehaviour
     public float m_FadeTime = 0.25f;  // 어두워지는 데 걸리는 시간 (밝아질 때도 동일)
     public float m_HoldTime = 0.15f;  // 완전히 검은 상태를 유지하는 시간
 
+    // ── 상호작용 안내/메시지 표시 (Canvas > interactText) ──
+    [Header("Interact Text (상호작용 안내 문구)")]
+    public Text m_InteractText;   // Canvas > interactText — 상호작용 안내와 메시지가 여기 출력됩니다
+
     // ── 장착 중인 아이템 표시 (Canvas > Icons, 화면 좌측 하단) ──
     [Header("Equipped Icon (좌측 하단 장착 표시)")]
     public Image m_EquipIcon;      // Icons > EquipIcon — 장착 아이템 그림
@@ -176,6 +180,17 @@ public class HudUI : MonoBehaviour
     {
         if (m_Setts != null)
             m_Setts.Deactivate();
+    }
+
+    // 상호작용 안내 문구/메시지를 화면에 표시합니다. (PlayerInventory가 매 프레임 넘겨줍니다)
+    // 빈 문자열을 넣으면 아무것도 보이지 않습니다.
+    // 같은 문구가 이어질 때 Text에 다시 넣으면 UI를 매번 새로 그리게 되므로, 바뀔 때만 반영합니다.
+    public void ShowInteract(string message)
+    {
+        if (m_InteractText == null || m_InteractText.text == message)
+            return;
+
+        m_InteractText.text = message;
     }
 
     // 장착 아이템이 바뀌었을 때만 좌측 하단 표시를 다시 그립니다.

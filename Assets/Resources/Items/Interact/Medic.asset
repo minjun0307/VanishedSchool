@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829c928dd02fad5418f8a44ed6b6c714, type: 3}
+  m_Name: Medic
+  m_EditorClassIdentifier: Assembly-CSharp::InteractData
+  m_Name: 
+  m_Prompt: "[F] \uC870\uC0AC\uD558\uAE30"
+  m_Message: "\uD0A4\uB85C \uC7A0\uACA8\uC788\uB2E4. \uD0A4\uB97C \uCC3E\uC73C\uBA74
+    \uC5F4\uC218\uC788\uC5B4 \uBCF4\uC778\uB2E4."
+  m_MessageTime: 2

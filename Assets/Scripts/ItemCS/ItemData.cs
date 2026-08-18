@@ -1,7 +1,9 @@
 using UnityEngine;
 
 // 아이템 종류 — F로 사용했을 때 어떤 효과로 분기할지 결정합니다.
-public enum ItemType { Key, Tool, Consumable }
+// Evidence(증거)는 맨 뒤에 추가했습니다. 중간에 끼워 넣으면 기존 에셋에 저장된
+// 숫자(Key=0, Tool=1, Consumable=2)가 밀려 종류가 통째로 바뀌기 때문입니다.
+public enum ItemType { Key, Tool, Consumable, Evidence }
 
 // 아이템을 사용했을 때 함께 발동하는 특수 효과.
 // ItemType이 '소모 규칙'(쓰면 칸이 비는지)이라면, 이쪽은 '무슨 일이 일어나는지'입니다.

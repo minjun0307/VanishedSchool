@@ -106,7 +106,7 @@ public class Setting2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Deactivate();
-            //m_monsterMoves.m_IsActive = true;
+            m_monsterMoves.m_IsActive = true;
         }
 
     }
